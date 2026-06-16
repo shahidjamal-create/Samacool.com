@@ -1,0 +1,169 @@
+================================================================================
+EmailJS SETUP INSTRUCTIONS FOR SERVICE BOOKING FORM
+================================================================================
+
+The booking form on your website is configured to send emails automatically when
+users submit the form. Follow these steps to make it work:
+
+STEP 1: CREATE AN EMAILJS ACCOUNT
+================================================================================
+1. Visit https://www.emailjs.com
+2. Sign up for a free account (or log in if you have one)
+3. Verify your email address
+
+STEP 2: CREATE AN EMAIL SERVICE
+================================================================================
+1. Go to "Email Services" in the EmailJS dashboard
+2. Click "Add New Service"
+3. Select your email provider (Gmail, Outlook, etc.) or choose SMTP
+4. For Gmail:
+   - Allow "Less secure apps" in your Gmail account settings
+   - Use your Gmail email and password
+5. Click "Create Service"
+6. Copy your SERVICE_ID (it will look like: service_xxxxxx)
+
+STEP 3: CREATE AN EMAIL TEMPLATE
+================================================================================
+1. Go to "Email Templates" in the dashboard
+2. Click "Create New Template"
+3. Set the template name: "Service Booking Request"
+4. Configure the template:
+
+   RECIPIENT EMAIL FIELD:
+   {{email_address}}
+   
+   SUBJECT:
+   New Service Booking Request
+
+   CONTENT (Copy and paste exactly):
+   ================================================================================
+   Customer Name: {{customer_name}}
+   Phone Number: {{phone_number}}
+   Email Address: {{email_address}}
+   Service Type: {{service_type}}
+   
+   Message:
+   {{message}}
+   ================================================================================
+
+5. Click "Save Template"
+6. Copy your TEMPLATE_ID (it will look like: template_xxxxxx)
+
+STEP 4: GET YOUR USER ID
+================================================================================
+1. Go to "Account" settings in EmailJS dashboard
+2. Find "User ID" at the top
+3. Copy it (it will look like: xxxxxxxxxxxxxxxx)
+
+STEP 5: UPDATE YOUR WEBSITE CODE
+================================================================================
+Open the file: scrpit.js
+
+Find this section (around line 147):
+   const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID';
+   const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
+   const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
+
+Replace with your actual IDs:
+   const EMAILJS_USER_ID = 'YOUR_ACTUAL_USER_ID_HERE';
+   const EMAILJS_SERVICE_ID = 'service_xxxxx';
+   const EMAILJS_TEMPLATE_ID = 'template_xxxxx';
+
+STEP 6: TEST THE FORM
+================================================================================
+1. Open your website in a browser
+2. Scroll to the "Service Booking Request" form
+3. Fill in all required fields:
+   - Customer Name
+   - Mobile Number
+   - Email Address
+   - Service Type
+   - Message (optional)
+4. Click "Send Request" button
+5. You should see "Sending..." message
+6. After 2-3 seconds, you should see "Email sent successfully!" message
+7. Check your email inbox for the booking request
+
+FORM FEATURES
+================================================================================
+✓ Automatic email sending via EmailJS
+✓ Form validation (checks all required fields)
+✓ Mobile number validation (10 digits)
+✓ Email format validation
+✓ Loading spinner while sending
+✓ Success message: "Email sent successfully! We will contact you soon."
+✓ Error messages for validation failures
+✓ Auto-clear form fields after successful submission
+✓ Auto-hide success message after 5 seconds
+✓ Fully responsive on mobile, tablet, and desktop
+✓ Enter key support (Ctrl+Enter in message field)
+
+FORM FIELDS
+================================================================================
+1. Customer Name (Required) - Text input
+2. Mobile Number (Required) - 10-digit validation
+3. Email Address (Required) - Email format validation
+4. Service Type (Required) - Dropdown with options:
+   - AC - Installation, Repair, Maintenance
+   - Refrigerator - Installation, Repair, Maintenance
+   - Washing Machine - Installation, Repair, Maintenance
+   - General Inquiry
+5. Message (Optional) - Text area for additional details
+
+TROUBLESHOOTING
+================================================================================
+
+Q: Form submits but I don't receive emails
+A: Check that:
+   - All three IDs are correctly copied in scrpit.js
+   - Email template is created with correct variable names
+   - Your email service is verified in EmailJS
+   - Check spam/junk folder
+
+Q: "Email service is unavailable" error
+A: This means EmailJS SDK isn't loaded. Make sure:
+   - You have internet connection
+   - CDN link for EmailJS is in the HTML head
+   - Check browser console for errors (F12 → Console tab)
+
+Q: Mobile number validation fails
+A: Make sure:
+   - Enter exactly 10 digits
+   - Start with 6-9 (valid Indian mobile numbers)
+   - No spaces or special characters
+
+Q: "Failed to send email" error
+A: Check that:
+   - Gmail/Outlook account has verified 2FA access
+   - SMTP credentials are correct
+   - Service is properly created in EmailJS
+   - Template variables match exactly
+
+CUSTOMER EXPERIENCE
+================================================================================
+When a customer fills the form:
+1. They fill in their details
+2. Click "Send Request"
+3. Button shows "Sending..." with spinner
+4. After 2-3 seconds: "Email sent successfully! We will contact you soon."
+5. Form automatically clears
+6. Success message hides after 5 seconds
+
+You receive email with their:
+- Full name
+- Mobile number
+- Email address
+- Service type selected
+- Any additional message
+
+SECURITY NOTES
+================================================================================
+- Never share your EmailJS credentials publicly
+- IDs in scrpit.js should not be committed to public repositories
+- EmailJS free tier: 200 emails per day
+- Paid plans available for higher volume
+- No data is stored on the website
+
+For more help, visit: https://www.emailjs.com/docs
+
+================================================================================
