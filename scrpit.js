@@ -269,23 +269,24 @@ function initContactForm() {
             return data;
         }
 
-        // Helper: Send via WhatsApp (always works, no config needed)
-        function sendViaWhatsApp(params) {
-            const whatsappNumber = '919894833958';
-            const text =
-                `📋 *New Service Booking Request*\n\n` +
-                `👤 *Name:* ${params.customer_name}\n` +
-                `📱 *Phone:* ${params.phone_number}\n` +
-                `📧 *Email:* ${params.email_address}\n` +
-                `🔧 *Service:* ${params.service_type}\n` +
-                `💬 *Message:* ${params.message}`;
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-            window.open(whatsappUrl, '_blank');
+        // Helper: Send via Email (always works, no config needed)
+        function sendViaEmail(params) {
+            const emailAddress = 'hyderalik111@gmail.com';
+            const subject = `New Service Booking Request from ${params.customer_name}`;
+            const body =
+                `New Service Booking Request\n\n` +
+                `Name: ${params.customer_name}\n` +
+                `Phone: ${params.phone_number}\n` +
+                `Email: ${params.email_address}\n` +
+                `Service: ${params.service_type}\n` +
+                `Message: ${params.message}`;
+            const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
         }
 
         setLoadingState();
 
-        // Strategy: Try EmailJS → Backend → WhatsApp (guaranteed fallback)
+        // Strategy: Try EmailJS → Backend → Email (guaranteed fallback)
         let sent = false;
 
         // 1. Try EmailJS if configured
@@ -313,10 +314,10 @@ function initContactForm() {
             }
         }
 
-        // 3. WhatsApp fallback — always works
+        // 3. Email fallback — always works
         if (!sent) {
-            console.log('Using WhatsApp fallback to deliver booking request.');
-            sendViaWhatsApp(templateParams);
+            console.log('Using Email fallback to deliver booking request.');
+            sendViaEmail(templateParams);
             sent = true;
         }
 
