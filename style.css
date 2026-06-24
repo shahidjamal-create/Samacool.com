@@ -1309,9 +1309,6 @@ header.scrolled .navbar {
 }
 
 .contact-form .btn {
-    margin-top: 10px;
-    padding: 16px 30px;
-    font-size: 0.95rem;
     width: 100%;
     display: inline-flex;
     align-items: center;
