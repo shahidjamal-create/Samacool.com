@@ -1,14 +1,16 @@
 // Main initialization
 document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('loaded');
     initMobileMenu();
     initServiceTabs();
     initSmoothScrolling();
     initContactForm();
     initCallButtons();
     initDesktopCallHelper();
-    initScrollAnimations();
+    initRevealAnimations();
     initHeaderScroll();
     initSocialLinks();
+    initThemeToggle();
 });
 
 // Mobile menu with enhanced animation
@@ -147,8 +149,14 @@ function initContactForm() {
     const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
     const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
 
+    // Web3Forms Configuration - Alternative way to send directly to your email without a backend
+    // Get a free key from https://web3forms.com/ and put it here:
+    const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+
     const isEmailJsConfigured = [EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID]
         .every(value => value && !value.includes('YOUR_'));
+
+    const isWeb3FormsConfigured = WEB3FORMS_ACCESS_KEY && !WEB3FORMS_ACCESS_KEY.includes('YOUR_');
 
     if (typeof emailjs !== 'undefined' && isEmailJsConfigured) {
         emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -269,6 +277,37 @@ function initContactForm() {
             return data;
         }
 
+        // Helper: Send via Web3Forms (directly to email without backend)
+        async function sendToWeb3Forms(params) {
+            console.log('Attempting Web3Forms POST submission...');
+            const resp = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_ACCESS_KEY,
+                    subject: `New Service Booking Request from ${params.customer_name}`,
+                    from_name: 'SAMACOOL Service Request',
+                    name: params.customer_name,
+                    phone: params.phone_number,
+                    email: params.email_address,
+                    service: params.service_type,
+                    message: params.message
+                })
+            });
+            if (!resp.ok) {
+                const text = await resp.text();
+                throw new Error(`Web3Forms error ${resp.status}: ${text}`);
+            }
+            const data = await resp.json();
+            if (!data.success) {
+                throw new Error(data.message || 'Web3Forms failed to send email.');
+            }
+            return data;
+        }
+
         // Helper: Send via Email (always works, no config needed)
         function sendViaEmail(params) {
             const emailAddress = 'hyderalik111@gmail.com';
@@ -286,7 +325,7 @@ function initContactForm() {
 
         setLoadingState();
 
-        // Strategy: Try EmailJS → Backend → Email (guaranteed fallback)
+        // Strategy: Try EmailJS → Web3Forms → Backend → Email (guaranteed fallback)
         let sent = false;
 
         // 1. Try EmailJS if configured
@@ -303,7 +342,18 @@ function initContactForm() {
             console.warn('EmailJS unavailable or not configured.');
         }
 
-        // 2. Try backend if EmailJS didn't work
+        // 2. Try Web3Forms if configured and EmailJS didn't work
+        if (!sent && isWeb3FormsConfigured) {
+            try {
+                const web3Resp = await sendToWeb3Forms(templateParams);
+                console.log('Web3Forms response:', web3Resp);
+                sent = true;
+            } catch (web3Err) {
+                console.warn('Web3Forms send failed:', web3Err);
+            }
+        }
+
+        // 3. Try backend if EmailJS and Web3Forms didn't work
         if (!sent) {
             try {
                 const backendResp = await sendToBackend(templateParams);
@@ -314,7 +364,7 @@ function initContactForm() {
             }
         }
 
-        // 3. Email fallback — always works
+        // 4. Email fallback — always works
         if (!sent) {
             console.log('Using Email fallback to deliver booking request.');
             sendViaEmail(templateParams);
@@ -368,9 +418,8 @@ function initCallButtons() {
     // Setup all call buttons
     const callButtons = [
         document.getElementById('heroCallBtn'),
-        document.getElementById('emergencyCallBtn'),
         document.getElementById('desktopCallHelper')
-    ];
+    ].filter(Boolean);
 
     callButtons.forEach(btn => {
         if (btn) {
@@ -446,6 +495,9 @@ function isMobile() {
 function initDesktopCallHelper() {
     const desktopCallHelper = document.getElementById('desktopCallHelper');
 
+    // If helper is not present (removed from DOM), do nothing.
+    if (!desktopCallHelper) return;
+
     if (!isMobile()) {
         desktopCallHelper.style.display = 'flex';
 
@@ -457,24 +509,44 @@ function initDesktopCallHelper() {
     }
 }
 
-// Scroll animations
-function initScrollAnimations() {
+// Reveal animations powered by IntersectionObserver
+function initRevealAnimations() {
     const reveals = document.querySelectorAll('.reveal');
 
-    const revealOnScroll = () => {
-        reveals.forEach(element => {
-            const windowHeight = window.innerHeight;
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-
-            if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             }
         });
-    };
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    });
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
+    reveals.forEach(element => {
+        const delay = element.dataset.revealDelay;
+        if (delay) {
+            element.style.transitionDelay = delay;
+        }
+        revealObserver.observe(element);
+    });
+
+    if (!('IntersectionObserver' in window)) {
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    }
 }
 
 // Header scroll effect
@@ -492,10 +564,42 @@ function initHeaderScroll() {
 
 // Social links
 function initSocialLinks() {
-    document.getElementById('whatsappLink').addEventListener('click', function (e) {
+    const whatsappLink = document.getElementById('whatsappLink');
+    if (!whatsappLink) return;
+
+    whatsappLink.addEventListener('click', function (e) {
         e.preventDefault();
         const whatsappUrl = `https://wa.me/919894833958?text=Hello! I need information about your appliance services.`;
         window.open(whatsappUrl, '_blank');
+    });
+}
+
+// Theme toggle
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const storedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const activeTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+    const icons = {
+        light: '<i class="fas fa-moon"></i>',
+        dark: '<i class="fas fa-sun"></i>'
+    };
+
+    function applyTheme(theme) {
+        document.body.classList.toggle('dark', theme === 'dark');
+        themeToggle.innerHTML = icons[theme];
+        themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        localStorage.setItem('theme', theme);
+    }
+
+    applyTheme(activeTheme);
+
+    themeToggle.addEventListener('click', function () {
+        const nextTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+        applyTheme(nextTheme);
     });
 }
 
@@ -552,3 +656,4 @@ function animateParticle(particle) {
 
 // Initialize particles
 createParticles();
+

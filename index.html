@@ -44,34 +44,25 @@
     <header id="mainHeader">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <div class="nav-logo border">
-                        <div class="logo"></div>
-                    </div>
+                <a href="#home" class="brand">
+                    <img src="logo.png" alt="SamaCoolLand" class="brand-logo">
+
                 </a>
 
-                <div class="mobile-toggle" id="mobileToggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-                    <li>
-                        <a href="#services"><i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#ac-service"><i class="fas fa-snowflake"></i> AC Service & Repair</a></li>
-                            <li><a href="#fridge-service"><i class="fas fa-thermometer-half"></i> Fridge Service &
-                                    Repair</a></li>
-                            <li><a href="#washing-service"><i class="fas fa-tint"></i> Washing Machine Service</a></li>
-                            <li><a href="#maintenance"><i class="fas fa-clipboard-check"></i> Annual Maintenance</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#products"><i class="fas fa-shopping-cart"></i> Products</a></li>
-                    <li><a href="#why-us"><i class="fas fa-star"></i> Why Us</a></li>
-                    <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
-                    <li><a href="#emergency" class="emergency-nav"><i class="fas fa-bolt"></i> Emergency</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#why-us">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+                    <div class="mobile-toggle" id="mobileToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -80,7 +71,7 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 class="reveal">Welecome To SamaCoolLand</h1>
+                <h1 class="reveal">Welcome To SamaCoolLand</h1>
                 <p class="reveal">Professional service, repair, and sales of ACs, Refrigerators, and Washing Machines.
                     40+ years of
                     trusted service with warranty on all repairs.</p>
@@ -96,80 +87,50 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
         <div class="container">
             <div class="section-title">
-                <h2 class="reveal">Way of Working</h2>
-                <p class="reveal">Our Working Process <br> Comprehensive repair and maintenance services for all major
-                    home appliances.</p>
+                <h2 class="reveal">Why Choose SAMACOOL</h2>
+                <p class="reveal">We provide reliable, affordable, and professional appliance services you can trust.
+                </p>
             </div>
 
-            <div class="services-tabs">
-                <button class="tab-btn active reveal" data-tab="ac">
-                    <i class="fas fa-snowflake"></i> AC Services
-                </button>
-                <button class="tab-btn reveal" data-tab="fridge">
-                    <i class="fas fa-thermometer-empty"></i> Fridge Services
-                </button>
-                <button class="tab-btn reveal" data-tab="washing">
-                    <i class="fas fa-tint"></i> Washing Machine
-                </button>
-                <button class="tab-btn reveal" data-tab="maintenance">
-                    <i class="fas fa-clipboard-check"></i> AMC Plans
-                </button>
-            </div>
-
-            <div id="ac" class="tab-content active">
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <i class="fas fa-tools"></i>
-                        <h3>AC Repair</h3>
-                        <p>Expert repair for all AC types - split, window, cassette. Fix cooling issues, gas leaks,
-                            compressor problems.</p>
-                        <span class="price">From ₹499</span>
-                    </div>
-
-                    <div class="service-card reveal">
-                        <i class="fas fa-cogs"></i>
-                        <h3>AC Installation</h3>
-                        <p>Professional installation with proper mounting, wiring, and testing for optimal performance.
-                        </p>
-                        <span class="price">From ₹1499</span>
-                    </div>
-
-                    <div class="service-card reveal">
-                        <i class="fas fa-broom"></i>
-                        <h3>AC Cleaning</h3>
-                        <p>Deep cleaning of coils, filters, and ducts to improve efficiency and air quality.</p>
-                        <span class="price">From ₹1199</span>
-                    </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Certified Technicians</h3>
+                    <p>All our technicians are certified and trained on all major appliance brands.</p>
                 </div>
-            </div>
 
-            <div id="fridge" class="tab-content">
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <i class="fas fa-temperature-low"></i>
-                        <h3>Fridge Repair</h3>
-                        <p>Fix cooling issues, thermostat problems, compressor failure, and gas leakage in all
-                            refrigerator types.</p>
-                        <span class="price">From ₹599</span>
-                    </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Service Warranty</h3>
+                    <p>warranty on all repairs and spare parts used in service.</p>
+                </div>
 
-                    <div class="service-card reveal">
-                        <i class="fas fa-wrench"></i>
-                        <h3>Fridge Gas Charging</h3>
-                        <p>Professional gas charging with leak detection using eco-friendly refrigerants.</p>
-                        <span class="price">From ₹1499</span>
-                    </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Same Day Service</h3>
+                    <p>Most repairs completed on the same day of booking. Emergency service available.</p>
+                </div>
 
-                    <div class="service-card reveal">
-                        <i class="fas fa-spray-can"></i>
-                        <h3>Fridge Deep Cleaning</h3>
-                        <p>Complete interior and exterior cleaning including coils and drainage system.</p>
-                        <span class="price">From ₹499</span>
-                    </div>
+                <div class="why-card reveal">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges. Get a quote before we start any repair work.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <i class="fas fa-truck"></i>
+                    <h3>Home Service</h3>
+                    <p>Free diagnosis and pickup-drop service within city limits.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Annual Maintenance</h3>
+                    <p>Affordable AMC plans for regular maintenance of all appliances.</p>
                 </div>
             </div>
         </div>
@@ -228,8 +189,8 @@
                         <h3>Washing Machine</h3>
                         <p>Fully automatic with multiple wash programs and energy saving.</p>
                         <div class="product-price">
-                            <!-- <span class="current-price">₹18,500</span>
-                            <span class="original-price">₹22,000</span> -->
+                            <span class="current-price">₹18,500</span>
+                            <span class="original-price">₹22,000</span>
                         </div>
                         <a href="#contact" class="btn btn-outline">
                             <i class="fas fa-shopping-cart"></i> Buy Now
@@ -239,91 +200,156 @@
             </div>
         </div>
     </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-us" id="why-us">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2 class="reveal">Why Choose SAMACOOL</h2>
-                <p class="reveal">We provide reliable, affordable, and professional appliance services you can trust.
-                </p>
+                <h2 class="reveal">Way of Working</h2>
+                <p class="reveal">Our Working Process <br> Comprehensive repair and maintenance services for all major
+                    home appliances.</p>
             </div>
 
-            <div class="why-grid">
-                <div class="why-card reveal">
-                    <i class="fas fa-user-check"></i>
-                    <h3>Certified Technicians</h3>
-                    <p>All our technicians are certified and trained on all major appliance brands.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Service Warranty</h3>
-                    <p>warranty on all repairs and spare parts used in service.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Same Day Service</h3>
-                    <p>Most repairs completed on the same day of booking. Emergency service available.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <i class="fas fa-rupee-sign"></i>
-                    <h3>Transparent Pricing</h3>
-                    <p>No hidden charges. Get a quote before we start any repair work.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <i class="fas fa-truck"></i>
-                    <h3>Home Service</h3>
-                    <p>Free diagnosis and pickup-drop service within city limits.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>Annual Maintenance</h3>
-                    <p>Affordable AMC plans for regular maintenance of all appliances.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emergency Section -->
-    <section class="emergency" id="emergency">
-        <div class="container">
-            <div class="emergency-content">
-                <h2 class="reveal">24/7 Emergency Service</h2>
-                <p class="reveal">Appliance breakdown? We provide emergency repair services round the clock for all your
-                    urgent needs.
-                </p>
-
-                <span class="phone-number reveal">
-                    <i class="fas fa-phone"></i> +91 9894833958
-                    <br>+91 8807822939
-                </span>
-
-                <button class="btn btn-accent reveal" id="emergencyCallBtn"
-                    style="font-size: 1.2rem; padding: 18px 45px; background: white; color: var(--primary-color);">
-                    <i class="fas fa-phone-alt"></i> Call for Emergency Service
+            <div class="services-tabs">
+                <button class="tab-btn active reveal" data-tab="ac">
+                    <i class="fas fa-snowflake"></i> AC Services
+                </button>
+                <button class="tab-btn reveal" data-tab="fridge">
+                    <i class="fas fa-thermometer-empty"></i> Fridge Services
+                </button>
+                <button class="tab-btn reveal" data-tab="washing">
+                    <i class="fas fa-tint"></i> Washing Machine
+                </button>
+                <button class="tab-btn reveal" data-tab="maintenance">
+                    <i class="fas fa-clipboard-check"></i> AMC Plans
                 </button>
             </div>
+
+
+            <div id="ac" class="tab-content active">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <i class="fas fa-tools"></i>
+                        <h3>AC Repair</h3>
+                        <p>Expert repair for all AC types - split, window, cassette. Fix cooling issues, gas leaks,
+                            compressor problems.</p>
+                        <span class="price">From ₹499</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-cogs"></i>
+                        <h3>AC Installation</h3>
+                        <p>Professional installation with proper mounting, wiring, and testing for optimal
+                            performance.
+                        </p>
+                        <span class="price">From ₹1499</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-broom"></i>
+                        <h3>AC Cleaning</h3>
+                        <p>Deep cleaning of coils, filters, and ducts to improve efficiency and air quality.</p>
+                        <span class="price">From ₹1199</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fridge" class="tab-content">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <i class="fas fa-temperature-low"></i>
+                        <h3>Fridge Repair</h3>
+                        <p>Fix cooling issues, thermostat problems, compressor failure, and gas leakage in all
+                            refrigerator types.</p>
+                        <span class="price">From ₹599</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Fridge Gas Charging</h3>
+                        <p>Professional gas charging with leak detection using eco-friendly refrigerants.</p>
+                        <span class="price">From ₹1499</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-spray-can"></i>
+                        <h3>Fridge Deep Cleaning</h3>
+                        <p>Complete interior and exterior cleaning including coils and drainage system.</p>
+                        <span class="price">From ₹499</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="washing" class="tab-content">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Washing Machine Repair</h3>
+                        <p>Expert diagnosis and repair for fully automatic, semi-automatic, top load, and front load machines.</p>
+                        <span class="price">From ₹499</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-plug"></i>
+                        <h3>Installation & Setup</h3>
+                        <p>Proper unboxing, installation, leveling, and water connection setup for new washing machines.</p>
+                        <span class="price">From ₹999</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-hands-wash"></i>
+                        <h3>Deep Drum Cleaning</h3>
+                        <p>Thorough cleaning of the washing drum to remove scaling, odors, and improve wash quality.</p>
+                        <span class="price">From ₹799</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="maintenance" class="tab-content">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Basic AMC Plan</h3>
+                        <p>2 routine maintenance visits per year, covering basic cleaning and performance checks.</p>
+                        <span class="price">₹1999 / year</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-star"></i>
+                        <h3>Premium AMC Plan</h3>
+                        <p>3 routine maintenance visits, free gas top-ups, and priority response times for breakdowns.</p>
+                        <span class="price">₹3499 / year</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <i class="fas fa-crown"></i>
+                        <h3>Comprehensive Plan</h3>
+                        <p>Complete peace of mind with 4 visits, zero labor costs on repairs, and free spare parts replacement.</p>
+                        <span class="price">₹5999 / year</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+    <!-- Emergency section removed per request -->
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2 class="reveal">Contact Us</h2>
-                <p class="reveal">Book a Service, Inquire About Products, Or Get a Free Quote. We Respond Within 30
+                <p class="reveal">Book a Service, Inquire About Products, Or Get a Free Quote. We Respond
+                    Within 30
                     Minutes.</p>
             </div>
 
             <div class="contact-container">
                 <div class="contact-info">
                     <h3 class="reveal">Reach Our Expert Team</h3>
-                    <p class="reveal">For all Your AC, Refrigerator, and Washing machine Needs - Sales, Service, and
+                    <p class="reveal">For all Your AC, Refrigerator, and Washing machine Needs - Sales,
+                        Service, and
                         Repair.</p>
 
                     <div class="contact-details">
@@ -415,9 +441,11 @@
                                 <select id="serviceType" name="serviceType" required>
                                     <option value="">Select service type</option>
                                     <option value="AC">AC - Installation, Repair, Maintenance</option>
-                                    <option value="Refrigerator">Refrigerator - Installation, Repair, Maintenance
+                                    <option value="Refrigerator">Refrigerator - Installation, Repair,
+                                        Maintenance
                                     </option>
-                                    <option value="Washing Machine">Washing Machine - Installation, Repair, Maintenance
+                                    <option value="Washing Machine">Washing Machine - Installation, Repair,
+                                        Maintenance
                                     </option>
                                     <option value="General Inquiry">General Inquiry</option>
                                 </select>
@@ -438,7 +466,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>>
 
     <!-- Footer -->
     <footer>
@@ -446,7 +474,8 @@
             <div class="footer-content">
                 <div class="footer-col reveal">
                     <h3>SAMACOOL Appliances</h3>
-                    <p>Your trusted partner for AC, refrigerator, and washing machine sales, service, and repair since
+                    <p>Your trusted partner for AC, refrigerator, and washing machine sales, service, and
+                        repair since
                         2008.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -471,8 +500,10 @@
                     <h3>Our Services</h3>
                     <ul>
                         <li><a href="#ac-service"><i class="fas fa-cog"></i> AC Service & Repair</a></li>
-                        <li><a href="#fridge-service"><i class="fas fa-cog"></i> Fridge Service & Repair</a></li>
-                        <li><a href="#washing-service"><i class="fas fa-cog"></i> Washing Machine Service</a></li>
+                        <li><a href="#fridge-service"><i class="fas fa-cog"></i> Fridge Service & Repair</a>
+                        </li>
+                        <li><a href="#washing-service"><i class="fas fa-cog"></i> Washing Machine
+                                Service</a></li>
                         <li><a href="#maintenance"><i class="fas fa-cog"></i> Annual Maintenance</a></li>
                         <li><a href="#installation"><i class="fas fa-cog"></i> Installation</a></li>
                     </ul>
@@ -490,7 +521,8 @@
             </div>
 
             <div class="copyright reveal">
-                <p>&copy; 2023 SAMACOOL Appliances. All rights reserved. | AC, Fridge, Washing Machine Service & Sales
+                <p>&copy; 2023 SAMACOOL Appliances. All rights reserved. | AC, Fridge, Washing Machine
+                    Service & Sales
                 </p>
                 <p style="margin-top: 10px;">Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> for your
                     comfort</p>
@@ -498,11 +530,9 @@
         </div>
     </footer>
 
-    <!-- Desktop Call Helper -->
-    <div class="desktop-call-helper" id="desktopCallHelper">
-        <i class="fas fa-phone-alt"></i>
-        <span>Call Now: +91 9894833958</span>
-    </div>
+    <!-- Desktop Call Helper removed -->
+
+    <!-- Floating Book Service removed per request -->
 
     <script src="scrpit.js"></script>
 </body>
