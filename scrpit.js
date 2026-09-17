@@ -260,9 +260,10 @@ function initContactForm() {
 
         // Helper: POST to backend booking endpoint
         async function sendToBackend(params) {
-            const backendEndpoint = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-                ? 'http://localhost:3000/api/book-service'
-                : '/api/book-service';
+            const isHttp = window.location.protocol.startsWith('http');
+            const backendEndpoint = isHttp
+                ? (window.location.port === '3000' || !window.location.port ? '/api/book-service' : 'http://localhost:3000/api/book-service')
+                : 'http://localhost:3000/api/book-service';
             console.log('Attempting backend POST to', backendEndpoint);
             const resp = await fetch(backendEndpoint, {
                 method: 'POST',
@@ -657,3 +658,200 @@ function animateParticle(particle) {
 // Initialize particles
 createParticles();
 
+// AC Product Catalog Modal Logic
+function initCatalogModal() {
+    const modal = document.getElementById('productCatalogModal');
+    const closeBtn = document.getElementById('closeCatalogModal');
+    // Select the AC "Buy Now" button
+    const buyButtons = document.querySelectorAll('.product-card:first-child .btn');
+    const filterBtns = document.querySelectorAll('#productCatalogModal .filter-btn');
+    const productCards = document.querySelectorAll('#productCatalogModal .detailed-product-card');
+    
+    if (!modal) return;
+    
+    // Open modal when AC buy button is clicked
+    buyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Filter logic
+    let activeBrand = 'all';
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const targetBtn = e.target.closest('.filter-btn');
+            if (!targetBtn) return;
+            
+            document.querySelectorAll('#productCatalogModal .filter-btn').forEach(b => b.classList.remove('active'));
+            activeBrand = targetBtn.getAttribute('data-brand');
+            targetBtn.classList.add('active');
+            filterProducts();
+        });
+    });
+    
+    function filterProducts() {
+        productCards.forEach(card => {
+            const cardBrand = card.getAttribute('data-brand');
+            const matchBrand = activeBrand === 'all' || cardBrand === activeBrand;
+            
+            if (matchBrand) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Refrigerator Product Catalog Modal Logic
+function initFridgeCatalogModal() {
+    const modal = document.getElementById('fridgeCatalogModal');
+    const closeBtn = document.getElementById('closeFridgeCatalogModal');
+    const buyFridgeButtons = document.querySelectorAll('.buy-fridge-btn');
+    const filterBtns = document.querySelectorAll('#fridgeCatalogModal .fridge-brand-btn');
+    const productCards = document.querySelectorAll('#fridgeCatalogModal .fridge-card');
+    
+    if (!modal) return;
+    
+    // Open modal when Fridge buy button is clicked
+    buyFridgeButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Filter logic
+    let activeBrand = 'all';
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const targetBtn = e.target.closest('.fridge-brand-btn');
+            if (!targetBtn) return;
+            
+            filterBtns.forEach(b => b.classList.remove('active'));
+            activeBrand = targetBtn.getAttribute('data-brand');
+            targetBtn.classList.add('active');
+            filterProducts();
+        });
+    });
+    
+    function filterProducts() {
+        productCards.forEach(card => {
+            const cardBrand = card.getAttribute('data-brand');
+            const matchBrand = activeBrand === 'all' || cardBrand === activeBrand;
+            
+            if (matchBrand) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Washing Machine Product Catalog Modal Logic
+function initWmCatalogModal() {
+    const modal = document.getElementById('wmCatalogModal');
+    const closeBtn = document.getElementById('closeWmCatalogModal');
+    const buyWmButtons = document.querySelectorAll('.buy-wm-btn');
+    const filterBtns = document.querySelectorAll('#wmCatalogModal .wm-brand-btn');
+    const productCards = document.querySelectorAll('#wmCatalogModal .wm-card');
+    
+    if (!modal) return;
+    
+    // Open modal when Washing Machine buy button is clicked
+    buyWmButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Filter logic
+    let activeBrand = 'all';
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const targetBtn = e.target.closest('.wm-brand-btn');
+            if (!targetBtn) return;
+            
+            filterBtns.forEach(b => b.classList.remove('active'));
+            activeBrand = targetBtn.getAttribute('data-brand');
+            targetBtn.classList.add('active');
+            filterProducts();
+        });
+    });
+    
+    function filterProducts() {
+        productCards.forEach(card => {
+            const cardBrand = card.getAttribute('data-brand');
+            const matchBrand = activeBrand === 'all' || cardBrand === activeBrand;
+            
+            if (matchBrand) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Initialize catalog modals
+initCatalogModal();
+initFridgeCatalogModal();
+initWmCatalogModal();

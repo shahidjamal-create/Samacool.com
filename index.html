@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" href="sama logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
@@ -178,7 +179,7 @@
                             <!-- <span class="current-price">₹24,999</span>
                             <span class="original-price">₹29,999</span> -->
                         </div>
-                        <a href="#contact" class="btn btn-outline">
+                        <a href="#contact" class="btn btn-outline buy-fridge-btn">
                             <i class="fas fa-shopping-cart"></i> Buy Now
                         </a>
                     </div>
@@ -195,7 +196,7 @@
                             <span class="current-price">₹18,500</span>
                             <span class="original-price">₹22,000</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline">
+                        <a href="#contact" class="btn btn-outline buy-wm-btn">
                             <i class="fas fa-shopping-cart"></i> Buy Now
                         </a>
                     </div>
@@ -287,14 +288,16 @@
                     <div class="service-card reveal">
                         <i class="fas fa-wrench"></i>
                         <h3>Washing Machine Repair</h3>
-                        <p>Expert diagnosis and repair for fully automatic, semi-automatic, top load, and front load machines.</p>
+                        <p>Expert diagnosis and repair for fully automatic, semi-automatic, top load, and front load
+                            machines.</p>
                         <span class="price">From ₹499</span>
                     </div>
 
                     <div class="service-card reveal">
                         <i class="fas fa-plug"></i>
                         <h3>Installation & Setup</h3>
-                        <p>Proper unboxing, installation, leveling, and water connection setup for new washing machines.</p>
+                        <p>Proper unboxing, installation, leveling, and water connection setup for new washing machines.
+                        </p>
                         <span class="price">From ₹999</span>
                     </div>
 
@@ -319,14 +322,16 @@
                     <div class="service-card reveal">
                         <i class="fas fa-star"></i>
                         <h3>Premium AMC Plan</h3>
-                        <p>3 routine maintenance visits, free gas top-ups, and priority response times for breakdowns.</p>
+                        <p>3 routine maintenance visits, free gas top-ups, and priority response times for breakdowns.
+                        </p>
                         <span class="price">₹3499 / year</span>
                     </div>
 
                     <div class="service-card reveal">
                         <i class="fas fa-crown"></i>
                         <h3>Comprehensive Plan</h3>
-                        <p>Complete peace of mind with 4 visits, zero labor costs on repairs, and free spare parts replacement.</p>
+                        <p>Complete peace of mind with 4 visits, zero labor costs on repairs, and free spare parts
+                            replacement.</p>
                         <span class="price">₹5999 / year</span>
                     </div>
                 </div>
@@ -536,6 +541,1070 @@
     <!-- Desktop Call Helper removed -->
 
     <!-- Floating Book Service removed per request -->
+
+    <!-- Product Catalog Modal -->
+    <div id="productCatalogModal" class="catalog-modal">
+        <div class="catalog-modal-content">
+            <div class="catalog-modal-header">
+                <div class="catalog-header-left">
+                    <div class="catalog-pretitle"><i class="fas fa-snowflake"></i> Cooling Comfort, Better Living</div>
+                    <h2>AC Product Catalog</h2>
+                    <p class="catalog-subtitle">Choose from top brands with the best cooling performance, energy efficiency and trusted quality. Find the perfect AC for your home or office.</p>
+                </div>
+                <div class="catalog-header-right">
+                    <div class="header-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Genuine Products</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">100% Original Brands</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Fast Delivery</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Quick & Safe</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <strong>Expert Support</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Call / WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="closeCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <span class="filter-label">Brand:</span>
+                    <button class="filter-btn brand-btn active" data-brand="all">All</button>
+                    <button class="filter-btn brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
+                    <button class="filter-btn brand-btn" data-brand="voltas"><span class="brand-text" style="color:#0088cc; font-style:italic; font-weight:800;">VOLTAS</span></button>
+                    <button class="filter-btn brand-btn" data-brand="daikin"><span class="brand-text" style="color:#00a1e9; font-weight:800;">DAIKIN</span></button>
+                    <button class="filter-btn brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn brand-btn" data-brand="carrier"><span class="brand-text" style="color:#0062a8; font-weight:700;">Carrier</span></button>
+                    <button class="filter-btn brand-btn" data-brand="blue-star"><span class="brand-text" style="color:#004b87; font-weight:700;">BLUE STAR</span></button>
+                    <button class="filter-btn brand-btn" data-brand="hitachi"><span class="brand-text" style="color:#e60000; font-weight:700;">HITACHI</span></button>
+                    <button class="filter-btn brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn brand-btn" data-brand="godrej"><span class="brand-text" style="color:#00a3e0; font-weight:700;">Godrej</span></button>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- 1. Samsung -->
+                <div class="detailed-product-card" data-brand="samsung">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="Ac1.jpg" alt="Samsung AC" onerror="this.src='https://via.placeholder.com/300x150?text=Samsung+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">AR18CY3AAWKNEN</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 42,990</div>
+                            <div class="dpc-original-price">₹ 52,990</div>
+                            <div class="dpc-discount">19% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. LG -->
+                <div class="detailed-product-card" data-brand="lg">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcLG.webp" alt="LG AC" onerror="this.src='https://via.placeholder.com/300x150?text=LG+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">JS-Q18WNZE</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 39,990</div>
+                            <div class="dpc-original-price">₹ 49,990</div>
+                            <div class="dpc-discount">20% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Voltas -->
+                <div class="detailed-product-card" data-brand="voltas">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcVoltas.webp" alt="Voltas AC" onerror="this.src='https://via.placeholder.com/300x150?text=Voltas+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#0088cc; font-style:italic; font-weight:900; font-size:1.1rem; margin-bottom:2px;">VOLTAS</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">183VJZJ</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 36,990</div>
+                            <div class="dpc-original-price">₹ 45,990</div>
+                            <div class="dpc-discount">19% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Daikin -->
+                <div class="detailed-product-card" data-brand="daikin">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcDaikin.webp" alt="Daikin AC" onerror="this.src='https://via.placeholder.com/300x150?text=Daikin+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#00a1e9; font-weight:900; font-size:1.1rem; margin-bottom:2px;"><i class="fas fa-play" style="font-size:0.8rem; transform:rotate(-45deg); margin-right:2px;"></i>DAIKIN</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FTKF50UV16U</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 48,990</div>
+                            <div class="dpc-original-price">₹ 59,990</div>
+                            <div class="dpc-discount">18% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Panasonic -->
+                <div class="detailed-product-card" data-brand="panasonic">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcPanasonic.webp" alt="Panasonic AC" onerror="this.src='https://via.placeholder.com/300x150?text=Panasonic+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">CS/CU-SU18XKY5W</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 44,990</div>
+                            <div class="dpc-original-price">₹ 54,990</div>
+                            <div class="dpc-discount">18% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Carrier -->
+                <div class="detailed-product-card" data-brand="carrier">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcCarrier.webp" alt="Carrier AC" onerror="this.src='https://via.placeholder.com/300x150?text=Carrier+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="display:inline-block; background:#0062a8; color:#fff; border-radius:12px; padding:2px 10px; font-weight:700; font-size:0.85rem; margin-bottom:4px;">Carrier</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">18K ESTER PLUS</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 46,990</div>
+                            <div class="dpc-original-price">₹ 56,990</div>
+                            <div class="dpc-discount">18% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Blue Star -->
+                <div class="detailed-product-card" data-brand="blue-star">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcBlueStar.webp" alt="Blue Star AC" onerror="this.src='https://via.placeholder.com/300x150?text=Blue+Star+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="display:inline-block; background:#004b87; color:#fff; padding:2px 8px; font-weight:700; font-size:0.8rem; margin-bottom:4px;"><i class="far fa-star"></i> BLUE STAR</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">IC518YATU</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 41,990</div>
+                            <div class="dpc-original-price">₹ 50,990</div>
+                            <div class="dpc-discount">18% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Hitachi -->
+                <div class="detailed-product-card" data-brand="hitachi">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcHitachi.webp" alt="Hitachi AC" onerror="this.src='https://via.placeholder.com/300x150?text=Hitachi+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e60000; font-weight:900; font-size:1.1rem; margin-bottom:2px;">HITACHI</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RAS.018CMT</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 43,990</div>
+                            <div class="dpc-original-price">₹ 53,990</div>
+                            <div class="dpc-discount">19% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Whirlpool -->
+                <div class="detailed-product-card" data-brand="whirlpool">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcWhirlpool.webp" alt="Whirlpool AC" onerror="this.src='https://via.placeholder.com/300x150?text=Whirlpool+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">1.5T MAGICOOL PRO</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 40,990</div>
+                            <div class="dpc-original-price">₹ 49,990</div>
+                            <div class="dpc-discount">18% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Godrej -->
+                <div class="detailed-product-card" data-brand="godrej">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="AcGodrej.webp" alt="Godrej AC" onerror="this.src='https://via.placeholder.com/300x150?text=Godrej+AC'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">GIC 18TTC3-WTA</h3>
+                        <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Cooling</span>
+                            <span><i class="fas fa-bolt"></i> Inverter</span>
+                            <span><i class="far fa-star"></i> 5Star</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 38,990</div>
+                            <div class="dpc-original-price">₹ 48,990</div>
+                            <div class="dpc-discount">20% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refrigerator Product Catalog Modal -->
+    <div id="fridgeCatalogModal" class="catalog-modal">
+        <div class="catalog-modal-content">
+            <div class="catalog-modal-header">
+                <div class="catalog-header-left">
+                    <div class="catalog-pretitle"><i class="fas fa-thermometer-empty"></i> Smart Cooling, Fresh Living</div>
+                    <h2>Refrigerator Product Catalog</h2>
+                    <p class="catalog-subtitle">Explore top refrigerator brands with advanced frost-free cooling, digital inverter technology, and maximum storage capacity.</p>
+                </div>
+                <div class="catalog-header-right">
+                    <div class="header-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Genuine Products</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">100% Original Brands</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Fast Delivery</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Quick & Safe</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <strong>Expert Support</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Call / WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="closeFridgeCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <span class="filter-label">Brand:</span>
+                    <button class="filter-btn fridge-brand-btn active" data-brand="all">All</button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="godrej"><span class="brand-text" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="haier"><span class="brand-text" style="color:#e2001a; font-weight:800;">Haier</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="bosch"><span class="brand-text" style="color:#e2001a; font-weight:800;">BOSCH</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="ifb"><span class="brand-text" style="color:#d32f2f; font-weight:800;">IFB</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="voltas-beko"><span class="brand-text" style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="hisense"><span class="brand-text" style="color:#009688; font-weight:800;">Hisense</span></button>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="fridgeCatalogGrid">
+                <!-- 1. Samsung -->
+                <div class="detailed-product-card fridge-card" data-brand="samsung">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeSamsung.webp" alt="Samsung Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT28C3052S8</h3>
+                        <div class="dpc-specs-string">236 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-compress-alt"></i> Digital Inverter</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 24,990</div>
+                            <div class="dpc-original-price">₹ 31,990</div>
+                            <div class="dpc-discount">22% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. LG -->
+                <div class="detailed-product-card fridge-card" data-brand="lg">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeLG.webp" alt="LG Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=LG+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">GL-S292RDS3</h3>
+                        <div class="dpc-specs-string">242 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-wind"></i> Door Cooling+</span>
+                            <span><i class="fas fa-check-circle"></i> Refurbished</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 26,490</div>
+                            <div class="dpc-original-price">₹ 33,990</div>
+                            <div class="dpc-discount">22% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Whirlpool -->
+                <div class="detailed-product-card fridge-card" data-brand="whirlpool">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeWhirlpool.webp" alt="Whirlpool Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">INTELLIFRESH INV 265</h3>
+                        <div class="dpc-specs-string">265 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> 6th Sense Intellifresh</span>
+                            <span><i class="fas fa-check-circle"></i> Excellent Condition</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 25,990</div>
+                            <div class="dpc-original-price">₹ 32,990</div>
+                            <div class="dpc-discount">21% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Godrej -->
+                <div class="detailed-product-card fridge-card" data-brand="godrej">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeGodrej.webp" alt="Godrej Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT EONVALOR 260</h3>
+                        <div class="dpc-specs-string">244 Litres | Double Door | 2 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-leaf"></i> Nano Shield Tech</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 22,990</div>
+                            <div class="dpc-original-price">₹ 28,990</div>
+                            <div class="dpc-discount">20% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Haier -->
+                <div class="detailed-product-card fridge-card" data-brand="haier">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeHaier.webp" alt="Haier Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Haier+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">HRB-2764PSG-E</h3>
+                        <div class="dpc-specs-string">256 Litres | Bottom Mounted | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-sync-alt"></i> 8-in-1 Convertible</span>
+                            <span><i class="fas fa-check-circle"></i> Mint Condition</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 27,990</div>
+                            <div class="dpc-original-price">₹ 35,990</div>
+                            <div class="dpc-discount">22% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Panasonic -->
+                <div class="detailed-product-card fridge-card" data-brand="panasonic">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgePanasonic.webp" alt="Panasonic Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">NR-MBG283VSS</h3>
+                        <div class="dpc-specs-string">280 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-shield-virus"></i> Ag Clean Protection</span>
+                            <span><i class="fas fa-check-circle"></i> Refurbished</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 28,490</div>
+                            <div class="dpc-original-price">₹ 36,490</div>
+                            <div class="dpc-discount">21% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Bosch -->
+                <div class="detailed-product-card fridge-card" data-brand="bosch">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeBosch.webp" alt="Bosch Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">CTC29S03NI</h3>
+                        <div class="dpc-specs-string">290 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> VarioInverter Tech</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 31,990</div>
+                            <div class="dpc-original-price">₹ 40,990</div>
+                            <div class="dpc-discount">22% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. IFB -->
+                <div class="detailed-product-card fridge-card" data-brand="ifb">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeIFB.webp" alt="IFB Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=IFB+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FF270-3S</h3>
+                        <div class="dpc-specs-string">270 Litres | Double Door | 3 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-fan"></i> 360 Airflow</span>
+                            <span><i class="fas fa-check-circle"></i> Excellent Condition</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 27,490</div>
+                            <div class="dpc-original-price">₹ 34,990</div>
+                            <div class="dpc-discount">21% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Voltas Beko -->
+                <div class="detailed-product-card fridge-card" data-brand="voltas-beko">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeVoltasBeko.webp" alt="Voltas Beko Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RFF250B</h3>
+                        <div class="dpc-specs-string">250 Litres | Double Door | 2 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-seedling"></i> HarvestFresh Tech</span>
+                            <span><i class="fas fa-check-circle"></i> Refurbished</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 23,490</div>
+                            <div class="dpc-original-price">₹ 29,990</div>
+                            <div class="dpc-discount">21% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Hisense -->
+                <div class="detailed-product-card fridge-card" data-brand="hisense">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="FridgeHisense.webp" alt="Hisense Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Hisense+Fridge'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#009688; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Hisense</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT260D4ASB</h3>
+                        <div class="dpc-specs-string">256 Litres | Double Door | 2 Star</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-snowflake"></i> Total No Frost</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 22,490</div>
+                            <div class="dpc-original-price">₹ 28,490</div>
+                            <div class="dpc-discount">21% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Washing Machine Product Catalog Modal -->
+    <div id="wmCatalogModal" class="catalog-modal">
+        <div class="catalog-modal-content">
+            <div class="catalog-modal-header">
+                <div class="catalog-header-left">
+                    <div class="catalog-pretitle"><i class="fas fa-sun"></i> Clean Clothes, Healthy Home</div>
+                    <h2>Washing Machine Product Catalog</h2>
+                    <p class="catalog-subtitle">Find the perfect washing machine for your home from top brands. Smart features, energy efficiency and great performance — all in one place.</p>
+                </div>
+                <div class="catalog-header-right">
+                    <div class="header-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Genuine Products</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">100% Original Brands</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Fast Delivery</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Quick & Safe</span>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <strong>Expert Support</strong><br>
+                                <span style="font-size: 0.7rem; color: var(--muted);">Call / WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="closeWmCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <span class="filter-label">Brand:</span>
+                    <button class="filter-btn wm-brand-btn active" data-brand="all">All</button>
+                    <button class="filter-btn wm-brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="ifb"><span class="brand-text" style="color:#d32f2f; font-weight:800;">IFB</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="bosch"><span class="brand-text" style="color:#e2001a; font-weight:800;">BOSCH</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="godrej"><span class="brand-text" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="haier"><span class="brand-text" style="color:#e2001a; font-weight:800;">Haier</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="voltas-beko"><span class="brand-text" style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="lloyd"><span class="brand-text" style="color:#0062a8; font-weight:800;">LLOYD</span></button>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="wmCatalogGrid">
+                <!-- 1. Samsung -->
+                <div class="detailed-product-card wm-card" data-brand="samsung">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmSamsung.webp" alt="Samsung Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WW80T504DAN/TL</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter | AI Wash</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-brain"></i> AI Wash</span>
+                            <span><i class="fas fa-bolt"></i> Digital Inverter</span>
+                            <span><i class="fas fa-soap"></i> Eco Bubble</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 32,990</div>
+                            <div class="dpc-original-price">₹ 54,990</div>
+                            <div class="dpc-discount">40% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. LG -->
+                <div class="detailed-product-card wm-card" data-brand="lg">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmLG.webp" alt="LG Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=LG+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FHB1208Z5M</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter | Steam</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-cloud"></i> Steam</span>
+                            <span><i class="fas fa-cogs"></i> 6 Motion DD</span>
+                            <span><i class="fas fa-wifi"></i> ThinQ</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 33,990</div>
+                            <div class="dpc-original-price">₹ 56,990</div>
+                            <div class="dpc-discount">40% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Whirlpool -->
+                <div class="detailed-product-card wm-card" data-brand="whirlpool">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmWhirlpool.webp" alt="Whirlpool Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WHITEMAGIC 7.5 GENX</h3>
+                        <div class="dpc-specs-string">7.5 kg | Top Load | ZPF Technology</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> ZPF Tech</span>
+                            <span><i class="fas fa-brain"></i> 6th Sense</span>
+                            <span><i class="fas fa-bolt"></i> Quick Wash</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 17,990</div>
+                            <div class="dpc-original-price">₹ 26,990</div>
+                            <div class="dpc-discount">33% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. IFB -->
+                <div class="detailed-product-card wm-card" data-brand="ifb">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmIFB.webp" alt="IFB Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=IFB+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">EXECUTIVE ZXS 8.0</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-tint"></i> Aqua Energie</span>
+                            <span><i class="fas fa-cloud"></i> Steam Care</span>
+                            <span><i class="fas fa-wifi"></i> WiFi</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 36,990</div>
+                            <div class="dpc-original-price">₹ 59,990</div>
+                            <div class="dpc-discount">38% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Bosch -->
+                <div class="detailed-product-card wm-card" data-brand="bosch">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmBosch.webp" alt="Bosch Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WGA244X0IN</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter | i-DOS</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-vial"></i> i-DOS</span>
+                            <span><i class="fas fa-shield-alt"></i> AntiStain</span>
+                            <span><i class="fas fa-volume-mute"></i> EcoSilence Drive</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 42,990</div>
+                            <div class="dpc-original-price">₹ 59,990</div>
+                            <div class="dpc-discount">30% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Godrej -->
+                <div class="detailed-product-card wm-card" data-brand="godrej">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmGodrej.webp" alt="Godrej Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WSEDGE 7.5 KG</h3>
+                        <div class="dpc-specs-string">7.5 kg | Top Load | Inverter</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-sync"></i> TurboDrum</span>
+                            <span><i class="fas fa-balance-scale"></i> Auto Balance</span>
+                            <span><i class="fas fa-volume-down"></i> Low Noise</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 16,490</div>
+                            <div class="dpc-original-price">₹ 24,990</div>
+                            <div class="dpc-discount">34% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Haier -->
+                <div class="detailed-product-card wm-card" data-brand="haier">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-blue">Popular</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmHaier.webp" alt="Haier Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Haier+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">HWM80-1469S6</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-shield-virus"></i> ABT</span>
+                            <span><i class="fas fa-cloud"></i> Steam Wash</span>
+                            <span><i class="fas fa-mobile-alt"></i> Smart Control</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 28,990</div>
+                            <div class="dpc-original-price">₹ 46,990</div>
+                            <div class="dpc-discount">38% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Panasonic -->
+                <div class="detailed-product-card wm-card" data-brand="panasonic">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-purple">New Arrival</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmPanasonic.webp" alt="Panasonic Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">NA-F80A7HRB</h3>
+                        <div class="dpc-specs-string">8 kg | Top Load | ActiveFoam</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-cloud-sun"></i> ActiveFoam</span>
+                            <span><i class="fas fa-tint"></i> Water Save</span>
+                            <span><i class="fas fa-shield-alt"></i> Durable</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 22,490</div>
+                            <div class="dpc-original-price">₹ 34,990</div>
+                            <div class="dpc-discount">36% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Voltas Beko -->
+                <div class="detailed-product-card wm-card" data-brand="voltas-beko">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-brown">Best Seller</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmVoltasBeko.webp" alt="Voltas Beko Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WTE80G3D0</h3>
+                        <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-bolt"></i> ProSmart</span>
+                            <span><i class="fas fa-water"></i> AquaWave</span>
+                            <span><i class="fas fa-stopwatch"></i> Fast Wash</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 25,990</div>
+                            <div class="dpc-original-price">₹ 39,990</div>
+                            <div class="dpc-discount">35% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Lloyd -->
+                <div class="detailed-product-card wm-card" data-brand="lloyd">
+                    <div class="dpc-top-actions">
+                        <div class="dpc-badge badge-green">Energy Efficient</div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="dpc-image">
+                        <img src="WmLloyd.webp" alt="Lloyd Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Lloyd+WM'">
+                    </div>
+                    <div class="dpc-info">
+                        <div class="dpc-brand-header" style="color:#0062a8; font-weight:800; font-size:1.1rem; margin-bottom:2px;">LLOYD</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">LWMT70A</h3>
+                        <div class="dpc-specs-string">7 kg | Top Load | Inverter</div>
+                        <div class="dpc-specs">
+                            <span><i class="fas fa-memory"></i> Memory Backup</span>
+                            <span><i class="fas fa-shield-alt"></i> Aqua Shield</span>
+                            <span><i class="fas fa-volume-down"></i> Low Noise</span>
+                        </div>
+                        <div class="dpc-pricing">
+                            <div class="dpc-price">₹ 14,990</div>
+                            <div class="dpc-original-price">₹ 22,990</div>
+                            <div class="dpc-discount">35% OFF</div>
+                        </div>
+                        <div class="dpc-footer">
+                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="#contact" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="scrpit.js"></script>
 </body>

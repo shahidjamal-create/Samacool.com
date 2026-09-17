@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const {
     EMAIL_HOST,
@@ -79,6 +80,9 @@ app.use(express.json());
 app.use(cors({
     origin: FRONTEND_ORIGIN || '*'
 }));
+
+// Serve static frontend assets and HTML files
+app.use(express.static(path.join(__dirname)));
 
 app.get('/api/health', (req, res) => {
     res.json({ status: 'OK', environment: process.env.NODE_ENV || 'development' });
