@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeCool Appliances | AC, Fridge, Washing Machine Service & Sales</title>
-    <link rel="icon" type="image/png" href="sama logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -13,36 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
-    <!-- Top Banner -->
-    <div class="top-banner">
-        <div class="container">
-            <div class="contact-info-top">
-                <span><i class="fas fa-phone"></i> Call Now: <a href="tel:+919894833958">+91 9894833958</a></span>
-                <span><i class="fas fa-envelope"></i> Email: <a
-                        href="mailto:hyderalik111@gmail.com">hyderalik111@gmail.com</a></span>
-                <span><i class="fas fa-clock"></i> Mon-Sun: 6AM - 10PM</span>
-                <span><i class="fas fa-map-marker-alt"></i> Home Service</span>
-            </div>
-            <div class="social-links reveal">
-                <a href="#" id="whatsappLink" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- Enhanced Header & Navigation -->
     <header id="mainHeader">
@@ -76,11 +50,12 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="reveal">Welcome To SamaCoolLand</h1>
-                <p class="reveal">Professional service, repair, and sales of ACs, Refrigerators, and Washing Machines.
-                    40+ years of
+                <p class="reveal">Trusted Appliance Experts with 30+ Years of Experience
+                    Expert sales, service and repair for ACs, Refrigerators and Washing Machines, with reliable
+                    workmanship and warranty on eligible repairs.
                     trusted service with warranty on all repairs.</p>
                 <div class="hero-buttons reveal">
-                    <a href="tel:+919894833958 " class="btn btn-accent" id="heroCallBtn">
+                    <a href="tel:+916384103958 " class="btn btn-accent" id="heroCallBtn">
                         <i class="fas fa-phone"></i> Call for Service
                     </a>
                     <a href="#contact" class="btn">
@@ -149,56 +124,199 @@
                     available.</p>
             </div>
 
-            <div class="products-grid">
-                <div class="product-card reveal">
-                    <div class="product-img">
-                        <img src="Ac1.jpg" alt="Split AC">
-                        <div class="product-badge">Best Seller</div>
+            <div class="products-grid featured-products-grid">
+                <!-- Card 1: Split AC -->
+                <div class="product-card featured-product-card reveal" data-product-id="ac">
+                    <div class="product-img-wrapper">
+                        <div class="badge-group">
+                            <span class="product-badge badge-bestseller"><i class="fas fa-fire"></i> Best Seller</span>
+                            <span class="product-badge badge-verified"><i class="fas fa-shield-check"></i> SAMACOOL
+                                Verified</span>
+                        </div>
+                        <div class="product-img">
+                            <img src="Ac1.jpg" alt="Split AC 1.5 Ton 5 Star Inverter"
+                                onerror="this.src='AcDaikin.webp'">
+                        </div>
                     </div>
                     <div class="product-content">
-                        <h3>1.5 Ton Split AC</h3>
-                        <p>OLD INVERTER OUTDOOR AC SECOND HAND</p>
-                        <div class="product-price">
-                            <!-- <span class="current-price">₹7,500</span> -->
+                        <div class="product-brand-row">
+                            <span class="product-brand-tag"><i class="fas fa-certificate"></i> SAMACOOL Inverter
+                                Series</span>
+                            <span class="product-brand-badge">Authorized</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
+                        <div class="product-category-label">SPLIT AC</div>
+                        <h3 class="product-title">Split AC 1.5 Ton 5 Star Inverter</h3>
+                        <p class="product-desc">High efficiency inverter cooling AC with 100% copper condenser, dual
+                            rotor technology & fast cooling mode.</p>
+
+                        <div class="product-brands-strip">
+                            <span class="brands-label"><i class="fas fa-tags"></i> Top Brands:</span>
+                            <div class="brands-chips">
+                                <span class="brand-pill" data-brand="samsung">Samsung</span>
+                                <span class="brand-pill" data-brand="daikin">Daikin</span>
+                                <span class="brand-pill" data-brand="voltas">Voltas</span>
+                                <span class="brand-pill" data-brand="lg">LG</span>
+                                <span class="brand-pill" data-brand="blue-star">Blue Star</span>
+                            </div>
+                        </div>
+
+                        <div class="product-specs-pills">
+                            <span class="spec-chip"><i class="fas fa-snowflake"></i> 1.5 Ton</span>
+                            <span class="spec-chip"><i class="fas fa-star"></i> 5 Star</span>
+                            <span class="spec-chip"><i class="fas fa-microchip"></i> Inverter</span>
+                            <span class="spec-chip"><i class="fas fa-shield-alt"></i> Copper Coils</span>
+                        </div>
+
+                        <div class="product-warranty-strip">
+                            <i class="fas fa-certificate"></i> 1 Year Unit + 10 Years Compressor Warranty
+                        </div>
+
+                        <div class="product-price-box">
+                            <div class="price-main">
+                                <span class="current-price">₹38,990</span>
+                                <span class="original-price">₹45,990</span>
+                            </div>
+                            <span class="discount-badge">15% OFF</span>
+                        </div>
+
+                        <div class="product-action-btns">
+                            <button type="button" class="btn btn-view-details" data-product-id="ac">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button type="button" class="btn btn-buy-now buy-ac-btn" data-product-id="ac">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-card reveal">
-                    <div class="product-img">
-                        <img src="DoubleDoor1.webp" alt="Refrigerator">
-                        <div class="product-badge">Hot Deal</div>
+                <!-- Card 2: Double Door Refrigerator -->
+                <div class="product-card featured-product-card reveal" data-product-id="fridge">
+                    <div class="product-img-wrapper">
+                        <div class="badge-group">
+                            <span class="product-badge badge-hotdeal"><i class="fas fa-bolt"></i> Hot Deal</span>
+                            <span class="product-badge badge-verified"><i class="fas fa-shield-check"></i> SAMACOOL
+                                Verified</span>
+                        </div>
+                        <div class="product-img">
+                            <img src="DoubleDoor_Clean.jpg" alt="Double Door Frost-Free Refrigerator 265L"
+                                onerror="this.src='DoubleDoor1.webp'">
+                        </div>
                     </div>
                     <div class="product-content">
-                        <h3>Double Door Refrigerator</h3>
-                        <p>Energy efficient with frost-free technology and spacious design.</p>
-                        <div class="product-price">
-                            <!-- <span class="current-price">₹24,999</span>
-                            <span class="original-price">₹29,999</span> -->
+                        <div class="product-brand-row">
+                            <span class="product-brand-tag"><i class="fas fa-certificate"></i> SAMACOOL FrostFree
+                                Series</span>
+                            <span class="product-brand-badge">Authorized</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline buy-fridge-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
+                        <div class="product-category-label">DOUBLE DOOR REFRIGERATOR</div>
+                        <h3 class="product-title">Double Door Frost-Free Refrigerator 265L</h3>
+                        <p class="product-desc">Spacious frost-free cooling refrigerator with multi airflow, toughened
+                            glass shelves & smart inverter compressor.</p>
+
+                        <div class="product-brands-strip">
+                            <span class="brands-label"><i class="fas fa-tags"></i> Top Brands:</span>
+                            <div class="brands-chips">
+                                <span class="brand-pill" data-brand="samsung">Samsung</span>
+                                <span class="brand-pill" data-brand="lg">LG</span>
+                                <span class="brand-pill" data-brand="whirlpool">Whirlpool</span>
+                                <span class="brand-pill" data-brand="godrej">Godrej</span>
+                                <span class="brand-pill" data-brand="panasonic">Panasonic</span>
+                            </div>
+                        </div>
+
+                        <div class="product-specs-pills">
+                            <span class="spec-chip"><i class="fas fa-box"></i> 265 Liters</span>
+                            <span class="spec-chip"><i class="fas fa-door-closed"></i> Double Door</span>
+                            <span class="spec-chip"><i class="fas fa-wind"></i> Frost Free</span>
+                            <span class="spec-chip"><i class="fas fa-star"></i> 3 Star</span>
+                        </div>
+
+                        <div class="product-warranty-strip">
+                            <i class="fas fa-certificate"></i> 1 Year Product + 10 Years Compressor Warranty
+                        </div>
+
+                        <div class="product-price-box">
+                            <div class="price-main">
+                                <span class="current-price">₹24,999</span>
+                                <span class="original-price">₹29,999</span>
+                            </div>
+                            <span class="discount-badge">17% OFF</span>
+                        </div>
+
+                        <div class="product-action-btns">
+                            <button type="button" class="btn btn-view-details" data-product-id="fridge">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button type="button" class="btn btn-buy-now buy-fridge-btn" data-product-id="fridge">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-card reveal">
-                    <div class="product-img">
-                        <img src="Washing Machine.webp" alt="Washing Machine">
+                <!-- Card 3: Washing Machine -->
+                <div class="product-card featured-product-card reveal" data-product-id="wm">
+                    <div class="product-img-wrapper">
+                        <div class="badge-group">
+                            <span class="product-badge badge-eco"><i class="fas fa-leaf"></i> Energy Efficient</span>
+                            <span class="product-badge badge-verified"><i class="fas fa-shield-check"></i> SAMACOOL
+                                Verified</span>
+                        </div>
+                        <div class="product-img">
+                            <img src="Washing Machine.webp" alt="Fully Automatic Front Load Washing Machine 7 Kg"
+                                onerror="this.src='WmLG.webp'">
+                        </div>
                     </div>
                     <div class="product-content">
-                        <h3>Washing Machine</h3>
-                        <p>Fully automatic with multiple wash programs and energy saving.</p>
-                        <div class="product-price">
-                            <span class="current-price">₹18,500</span>
-                            <span class="original-price">₹22,000</span>
+                        <div class="product-brand-row">
+                            <span class="product-brand-tag"><i class="fas fa-certificate"></i> SAMACOOL WashPro
+                                Series</span>
+                            <span class="product-brand-badge">Authorized</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline buy-wm-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
+                        <div class="product-category-label">WASHING MACHINE</div>
+                        <h3 class="product-title">Fully Automatic Front Load Washing Machine 7 Kg</h3>
+                        <p class="product-desc">Advanced front load washing machine with steam care cycle, smart
+                            inverter motor & 14 custom wash programs.</p>
+
+                        <div class="product-brands-strip">
+                            <span class="brands-label"><i class="fas fa-tags"></i> Top Brands:</span>
+                            <div class="brands-chips">
+                                <span class="brand-pill" data-brand="bosch">Bosch</span>
+                                <span class="brand-pill" data-brand="lg">LG</span>
+                                <span class="brand-pill" data-brand="ifb">IFB</span>
+                                <span class="brand-pill" data-brand="samsung">Samsung</span>
+                                <span class="brand-pill" data-brand="whirlpool">Whirlpool</span>
+                            </div>
+                        </div>
+
+                        <div class="product-specs-pills">
+                            <span class="spec-chip"><i class="fas fa-weight"></i> 7.0 Kg</span>
+                            <span class="spec-chip"><i class="fas fa-circle-notch"></i> Front Load</span>
+                            <span class="spec-chip"><i class="fas fa-cog"></i> Smart Inverter</span>
+                            <span class="spec-chip"><i class="fas fa-soap"></i> 14 Programs</span>
+                        </div>
+
+                        <div class="product-warranty-strip">
+                            <i class="fas fa-certificate"></i> 2 Years Comprehensive + 10 Years Motor Warranty
+                        </div>
+
+                        <div class="product-price-box">
+                            <div class="price-main">
+                                <span class="current-price">₹18,500</span>
+                                <span class="original-price">₹22,000</span>
+                            </div>
+                            <span class="discount-badge">16% OFF</span>
+                        </div>
+
+                        <div class="product-action-btns">
+                            <button type="button" class="btn btn-view-details" data-product-id="wm">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button type="button" class="btn btn-buy-now buy-wm-btn" data-product-id="wm">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -374,8 +492,8 @@
                             <div>
                                 <h4>Mobile Number</h4>
                                 <p>
-                                    <a href="tel:+919894833958">+91 9894833958</a><br>
-                                    <a href="tel:+918807822939">+91 9894833958</a>
+                                    <a href="tel:+916384103958">+91 6384103958</a><br>
+                                    <a href="tel:+916384103958">+91 6384103958</a>
                                 </p>
                             </div>
                         </div>
@@ -385,7 +503,7 @@
                             <div>
                                 <h4>Email Address</h4>
                                 <p>
-                                    <a href="hyderalik111@gmail.com">hyderalik111@gmail.com</a>
+                                    <a href="mailto:shahidjamal13258@gmail.com">shahidjamal13258@gmail.com</a>
                                 </p>
                             </div>
                         </div>
@@ -424,7 +542,7 @@
 
                     <div id="formMessage" class="form-message"></div>
 
-                    <form id="contactForm" class="contact-card-form" novalidate>
+                    <form id="contactForm" class="contact-card-form" action="https://formsubmit.co/shahidjamal13258@gmail.com" method="POST" novalidate>
                         <div class="form-grid">
                             <div class="form-group required reveal">
                                 <label for="customerName">Customer Name <span class="required-star">*</span></label>
@@ -476,68 +594,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col reveal">
-                    <h3>SAMACOOL Appliances</h3>
-                    <p>Your trusted partner for AC, refrigerator, and washing machine sales, service, and
-                        repair since
-                        2008.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col reveal">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
-                        <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col reveal">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="#ac-service"><i class="fas fa-cog"></i> AC Service & Repair</a></li>
-                        <li><a href="#fridge-service"><i class="fas fa-cog"></i> Fridge Service & Repair</a>
-                        </li>
-                        <li><a href="#washing-service"><i class="fas fa-cog"></i> Washing Machine
-                                Service</a></li>
-                        <li><a href="#maintenance"><i class="fas fa-cog"></i> Annual Maintenance</a></li>
-                        <li><a href="#installation"><i class="fas fa-cog"></i> Installation</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col reveal">
-                    <h3>Business Hours</h3>
-                    <div class="opening-hours">
-                        <p>Monday - Saturday <span>8:00 AM - 10:00 PM</span></p>
-                        <p>Sunday <span>9:00 AM - 8:00 PM</span></p>
-                        <p>Emergency Service <span>24/7 Available</span></p>
-                        <p>Free Home Visit <span>Within City</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="copyright reveal">
-                <p>&copy; 2023 SAMACOOL Appliances. All rights reserved. | AC, Fridge, Washing Machine
-                    Service & Sales
-                </p>
-                <p style="margin-top: 10px;">Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> for your
-                    comfort</p>
-            </div>
-        </div>
-    </footer>
-
     <!-- Desktop Call Helper removed -->
 
     <!-- Floating Book Service removed per request -->
@@ -549,7 +605,8 @@
                 <div class="catalog-header-left">
                     <div class="catalog-pretitle"><i class="fas fa-snowflake"></i> Cooling Comfort, Better Living</div>
                     <h2>AC Product Catalog</h2>
-                    <p class="catalog-subtitle">Choose from top brands with the best cooling performance, energy efficiency and trusted quality. Find the perfect AC for your home or office.</p>
+                    <p class="catalog-subtitle">Choose from top brands with the best cooling performance, energy
+                        efficiency and trusted quality. Find the perfect AC for your home or office.</p>
                 </div>
                 <div class="catalog-header-right">
                     <div class="header-trust-badges">
@@ -578,21 +635,31 @@
                     <button id="closeCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
                 </div>
             </div>
-            
+
             <div class="catalog-filters">
                 <div class="filter-group">
                     <span class="filter-label">Brand:</span>
                     <button class="filter-btn brand-btn active" data-brand="all">All</button>
-                    <button class="filter-btn brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
-                    <button class="filter-btn brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
-                    <button class="filter-btn brand-btn" data-brand="voltas"><span class="brand-text" style="color:#0088cc; font-style:italic; font-weight:800;">VOLTAS</span></button>
-                    <button class="filter-btn brand-btn" data-brand="daikin"><span class="brand-text" style="color:#00a1e9; font-weight:800;">DAIKIN</span></button>
-                    <button class="filter-btn brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
-                    <button class="filter-btn brand-btn" data-brand="carrier"><span class="brand-text" style="color:#0062a8; font-weight:700;">Carrier</span></button>
-                    <button class="filter-btn brand-btn" data-brand="blue-star"><span class="brand-text" style="color:#004b87; font-weight:700;">BLUE STAR</span></button>
-                    <button class="filter-btn brand-btn" data-brand="hitachi"><span class="brand-text" style="color:#e60000; font-weight:700;">HITACHI</span></button>
-                    <button class="filter-btn brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
-                    <button class="filter-btn brand-btn" data-brand="godrej"><span class="brand-text" style="color:#00a3e0; font-weight:700;">Godrej</span></button>
+                    <button class="filter-btn brand-btn" data-brand="samsung"><span
+                            class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span
+                            class="brand-text">LG</span></button>
+                    <button class="filter-btn brand-btn" data-brand="voltas"><span class="brand-text"
+                            style="color:#0088cc; font-style:italic; font-weight:800;">VOLTAS</span></button>
+                    <button class="filter-btn brand-btn" data-brand="daikin"><span class="brand-text"
+                            style="color:#00a1e9; font-weight:800;">DAIKIN</span></button>
+                    <button class="filter-btn brand-btn" data-brand="panasonic"><span class="brand-text"
+                            style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn brand-btn" data-brand="carrier"><span class="brand-text"
+                            style="color:#0062a8; font-weight:700;">Carrier</span></button>
+                    <button class="filter-btn brand-btn" data-brand="blue-star"><span class="brand-text"
+                            style="color:#004b87; font-weight:700;">BLUE STAR</span></button>
+                    <button class="filter-btn brand-btn" data-brand="hitachi"><span class="brand-text"
+                            style="color:#e60000; font-weight:700;">HITACHI</span></button>
+                    <button class="filter-btn brand-btn" data-brand="whirlpool"><span class="brand-text"
+                            style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn brand-btn" data-brand="godrej"><span class="brand-text"
+                            style="color:#00a3e0; font-weight:700;">Godrej</span></button>
                 </div>
             </div>
 
@@ -604,11 +671,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="Ac1.jpg" alt="Samsung AC" onerror="this.src='https://via.placeholder.com/300x150?text=Samsung+AC'">
+                        <img src="Ac1.jpg" alt="Samsung AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Samsung+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">AR18CY3AAWKNEN</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            SAMSUNG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">AR18CY3AAWKNEN
+                        </h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> Cooling</span>
@@ -621,7 +692,8 @@
                             <div class="dpc-discount">19% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -634,10 +706,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcLG.webp" alt="LG AC" onerror="this.src='https://via.placeholder.com/300x150?text=LG+AC'">
+                        <img src="AcLG.webp" alt="LG AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=LG+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <div class="dpc-brand-header"
+                            style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            <i class="fab fa-lg"></i> LG
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">JS-Q18WNZE</h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
@@ -651,7 +727,8 @@
                             <div class="dpc-discount">20% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -664,10 +741,13 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcVoltas.webp" alt="Voltas AC" onerror="this.src='https://via.placeholder.com/300x150?text=Voltas+AC'">
+                        <img src="AcVoltas.webp" alt="Voltas AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Voltas+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#0088cc; font-style:italic; font-weight:900; font-size:1.1rem; margin-bottom:2px;">VOLTAS</div>
+                        <div class="dpc-brand-header"
+                            style="color:#0088cc; font-style:italic; font-weight:900; font-size:1.1rem; margin-bottom:2px;">
+                            VOLTAS</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">183VJZJ</h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
@@ -681,7 +761,8 @@
                             <div class="dpc-discount">19% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -694,10 +775,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcDaikin.webp" alt="Daikin AC" onerror="this.src='https://via.placeholder.com/300x150?text=Daikin+AC'">
+                        <img src="AcDaikin.webp" alt="Daikin AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Daikin+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#00a1e9; font-weight:900; font-size:1.1rem; margin-bottom:2px;"><i class="fas fa-play" style="font-size:0.8rem; transform:rotate(-45deg); margin-right:2px;"></i>DAIKIN</div>
+                        <div class="dpc-brand-header"
+                            style="color:#00a1e9; font-weight:900; font-size:1.1rem; margin-bottom:2px;"><i
+                                class="fas fa-play"
+                                style="font-size:0.8rem; transform:rotate(-45deg); margin-right:2px;"></i>DAIKIN</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FTKF50UV16U</h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
@@ -711,7 +796,8 @@
                             <div class="dpc-discount">18% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -724,11 +810,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcPanasonic.webp" alt="Panasonic AC" onerror="this.src='https://via.placeholder.com/300x150?text=Panasonic+AC'">
+                        <img src="AcPanasonic.webp" alt="Panasonic AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Panasonic+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">CS/CU-SU18XKY5W</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">CS/CU-SU18XKY5W
+                        </h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> Cooling</span>
@@ -741,7 +830,8 @@
                             <div class="dpc-discount">18% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -754,11 +844,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcCarrier.webp" alt="Carrier AC" onerror="this.src='https://via.placeholder.com/300x150?text=Carrier+AC'">
+                        <img src="AcCarrier.webp" alt="Carrier AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Carrier+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="display:inline-block; background:#0062a8; color:#fff; border-radius:12px; padding:2px 10px; font-weight:700; font-size:0.85rem; margin-bottom:4px;">Carrier</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">18K ESTER PLUS</h3>
+                        <div class="dpc-brand-header"
+                            style="display:inline-block; background:#0062a8; color:#fff; border-radius:12px; padding:2px 10px; font-weight:700; font-size:0.85rem; margin-bottom:4px;">
+                            Carrier</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">18K ESTER PLUS
+                        </h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> Cooling</span>
@@ -771,7 +865,8 @@
                             <div class="dpc-discount">18% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -784,10 +879,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcBlueStar.webp" alt="Blue Star AC" onerror="this.src='https://via.placeholder.com/300x150?text=Blue+Star+AC'">
+                        <img src="AcBlueStar.webp" alt="Blue Star AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Blue+Star+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="display:inline-block; background:#004b87; color:#fff; padding:2px 8px; font-weight:700; font-size:0.8rem; margin-bottom:4px;"><i class="far fa-star"></i> BLUE STAR</div>
+                        <div class="dpc-brand-header"
+                            style="display:inline-block; background:#004b87; color:#fff; padding:2px 8px; font-weight:700; font-size:0.8rem; margin-bottom:4px;">
+                            <i class="far fa-star"></i> BLUE STAR
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">IC518YATU</h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
@@ -801,7 +900,8 @@
                             <div class="dpc-discount">18% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -814,10 +914,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcHitachi.webp" alt="Hitachi AC" onerror="this.src='https://via.placeholder.com/300x150?text=Hitachi+AC'">
+                        <img src="AcHitachi.webp" alt="Hitachi AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Hitachi+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e60000; font-weight:900; font-size:1.1rem; margin-bottom:2px;">HITACHI</div>
+                        <div class="dpc-brand-header"
+                            style="color:#e60000; font-weight:900; font-size:1.1rem; margin-bottom:2px;">HITACHI</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RAS.018CMT</h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
@@ -831,7 +933,8 @@
                             <div class="dpc-discount">19% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -844,11 +947,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcWhirlpool.webp" alt="Whirlpool AC" onerror="this.src='https://via.placeholder.com/300x150?text=Whirlpool+AC'">
+                        <img src="AcWhirlpool.webp" alt="Whirlpool AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Whirlpool+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">1.5T MAGICOOL PRO</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">1.5T MAGICOOL PRO
+                        </h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> Cooling</span>
@@ -861,7 +967,8 @@
                             <div class="dpc-discount">18% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -874,11 +981,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="AcGodrej.webp" alt="Godrej AC" onerror="this.src='https://via.placeholder.com/300x150?text=Godrej+AC'">
+                        <img src="AcGodrej.webp" alt="Godrej AC"
+                            onerror="this.src='https://via.placeholder.com/300x150?text=Godrej+AC'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">GIC 18TTC3-WTA</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">
+                            Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">GIC 18TTC3-WTA
+                        </h3>
                         <div class="dpc-specs-string">1.5 Ton | Inverter | Split AC</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> Cooling</span>
@@ -891,7 +1002,8 @@
                             <div class="dpc-discount">20% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -905,9 +1017,11 @@
         <div class="catalog-modal-content">
             <div class="catalog-modal-header">
                 <div class="catalog-header-left">
-                    <div class="catalog-pretitle"><i class="fas fa-thermometer-empty"></i> Smart Cooling, Fresh Living</div>
+                    <div class="catalog-pretitle"><i class="fas fa-thermometer-empty"></i> Smart Cooling, Fresh Living
+                    </div>
                     <h2>Refrigerator Product Catalog</h2>
-                    <p class="catalog-subtitle">Explore top refrigerator brands with advanced frost-free cooling, digital inverter technology, and maximum storage capacity.</p>
+                    <p class="catalog-subtitle">Explore top refrigerator brands with advanced frost-free cooling,
+                        digital inverter technology, and maximum storage capacity.</p>
                 </div>
                 <div class="catalog-header-right">
                     <div class="header-trust-badges">
@@ -936,21 +1050,31 @@
                     <button id="closeFridgeCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
                 </div>
             </div>
-            
+
             <div class="catalog-filters">
                 <div class="filter-group">
                     <span class="filter-label">Brand:</span>
                     <button class="filter-btn fridge-brand-btn active" data-brand="all">All</button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="godrej"><span class="brand-text" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="haier"><span class="brand-text" style="color:#e2001a; font-weight:800;">Haier</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="bosch"><span class="brand-text" style="color:#e2001a; font-weight:800;">BOSCH</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="ifb"><span class="brand-text" style="color:#d32f2f; font-weight:800;">IFB</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="voltas-beko"><span class="brand-text" style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
-                    <button class="filter-btn fridge-brand-btn" data-brand="hisense"><span class="brand-text" style="color:#009688; font-weight:800;">Hisense</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="samsung"><span
+                            class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span
+                            class="brand-text">LG</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="whirlpool"><span class="brand-text"
+                            style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="godrej"><span class="brand-text"
+                            style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="haier"><span class="brand-text"
+                            style="color:#e2001a; font-weight:800;">Haier</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="panasonic"><span class="brand-text"
+                            style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="bosch"><span class="brand-text"
+                            style="color:#e2001a; font-weight:800;">BOSCH</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="ifb"><span class="brand-text"
+                            style="color:#d32f2f; font-weight:800;">IFB</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="voltas-beko"><span class="brand-text"
+                            style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
+                    <button class="filter-btn fridge-brand-btn" data-brand="hisense"><span class="brand-text"
+                            style="color:#009688; font-weight:800;">Hisense</span></button>
                 </div>
             </div>
 
@@ -962,10 +1086,13 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeSamsung.webp" alt="Samsung Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+Fridge'">
+                        <img src="FridgeSamsung.webp" alt="Samsung Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
+                        <div class="dpc-brand-header"
+                            style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            SAMSUNG</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT28C3052S8</h3>
                         <div class="dpc-specs-string">236 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
@@ -978,7 +1105,8 @@
                             <div class="dpc-discount">22% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -991,10 +1119,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeLG.webp" alt="LG Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=LG+Fridge'">
+                        <img src="FridgeLG.webp" alt="LG Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=LG+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <div class="dpc-brand-header"
+                            style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            <i class="fab fa-lg"></i> LG
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">GL-S292RDS3</h3>
                         <div class="dpc-specs-string">242 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
@@ -1007,7 +1139,8 @@
                             <div class="dpc-discount">22% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1020,11 +1153,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeWhirlpool.webp" alt="Whirlpool Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+Fridge'">
+                        <img src="FridgeWhirlpool.webp" alt="Whirlpool Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">INTELLIFRESH INV 265</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">INTELLIFRESH INV
+                            265</h3>
                         <div class="dpc-specs-string">265 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-snowflake"></i> 6th Sense Intellifresh</span>
@@ -1036,7 +1172,8 @@
                             <div class="dpc-discount">21% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1049,11 +1186,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeGodrej.webp" alt="Godrej Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+Fridge'">
+                        <img src="FridgeGodrej.webp" alt="Godrej Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT EONVALOR 260</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">
+                            Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT EONVALOR 260
+                        </h3>
                         <div class="dpc-specs-string">244 Litres | Double Door | 2 Star</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-leaf"></i> Nano Shield Tech</span>
@@ -1065,7 +1206,8 @@
                             <div class="dpc-discount">20% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1078,11 +1220,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeHaier.webp" alt="Haier Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Haier+Fridge'">
+                        <img src="FridgeHaier.webp" alt="Haier Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Haier+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">HRB-2764PSG-E</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">HRB-2764PSG-E
+                        </h3>
                         <div class="dpc-specs-string">256 Litres | Bottom Mounted | 3 Star</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-sync-alt"></i> 8-in-1 Convertible</span>
@@ -1094,7 +1239,8 @@
                             <div class="dpc-discount">22% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1107,10 +1253,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgePanasonic.webp" alt="Panasonic Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+Fridge'">
+                        <img src="FridgePanasonic.webp" alt="Panasonic Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <div class="dpc-brand-header"
+                            style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">NR-MBG283VSS</h3>
                         <div class="dpc-specs-string">280 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
@@ -1123,7 +1271,8 @@
                             <div class="dpc-discount">21% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1136,10 +1285,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeBosch.webp" alt="Bosch Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+Fridge'">
+                        <img src="FridgeBosch.webp" alt="Bosch Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
+                        <div class="dpc-brand-header"
+                            style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">CTC29S03NI</h3>
                         <div class="dpc-specs-string">290 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
@@ -1152,7 +1303,8 @@
                             <div class="dpc-discount">22% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1165,10 +1317,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeIFB.webp" alt="IFB Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=IFB+Fridge'">
+                        <img src="FridgeIFB.webp" alt="IFB Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=IFB+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
+                        <div class="dpc-brand-header"
+                            style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FF270-3S</h3>
                         <div class="dpc-specs-string">270 Litres | Double Door | 3 Star</div>
                         <div class="dpc-specs">
@@ -1181,7 +1335,8 @@
                             <div class="dpc-discount">21% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1194,10 +1349,13 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeVoltasBeko.webp" alt="Voltas Beko Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+Fridge'">
+                        <img src="FridgeVoltasBeko.webp" alt="Voltas Beko Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko</div>
+                        <div class="dpc-brand-header"
+                            style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RFF250B</h3>
                         <div class="dpc-specs-string">250 Litres | Double Door | 2 Star</div>
                         <div class="dpc-specs">
@@ -1210,7 +1368,8 @@
                             <div class="dpc-discount">21% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1223,10 +1382,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="FridgeHisense.webp" alt="Hisense Refrigerator" onerror="this.src='https://via.placeholder.com/300x200?text=Hisense+Fridge'">
+                        <img src="FridgeHisense.webp" alt="Hisense Refrigerator"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Hisense+Fridge'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#009688; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Hisense</div>
+                        <div class="dpc-brand-header"
+                            style="color:#009688; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Hisense</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">RT260D4ASB</h3>
                         <div class="dpc-specs-string">256 Litres | Double Door | 2 Star</div>
                         <div class="dpc-specs">
@@ -1239,7 +1400,8 @@
                             <div class="dpc-discount">21% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1255,7 +1417,8 @@
                 <div class="catalog-header-left">
                     <div class="catalog-pretitle"><i class="fas fa-sun"></i> Clean Clothes, Healthy Home</div>
                     <h2>Washing Machine Product Catalog</h2>
-                    <p class="catalog-subtitle">Find the perfect washing machine for your home from top brands. Smart features, energy efficiency and great performance — all in one place.</p>
+                    <p class="catalog-subtitle">Find the perfect washing machine for your home from top brands. Smart
+                        features, energy efficiency and great performance — all in one place.</p>
                 </div>
                 <div class="catalog-header-right">
                     <div class="header-trust-badges">
@@ -1284,21 +1447,31 @@
                     <button id="closeWmCatalogModal" class="close-modal-btn"><i class="fas fa-times"></i></button>
                 </div>
             </div>
-            
+
             <div class="catalog-filters">
                 <div class="filter-group">
                     <span class="filter-label">Brand:</span>
                     <button class="filter-btn wm-brand-btn active" data-brand="all">All</button>
-                    <button class="filter-btn wm-brand-btn" data-brand="samsung"><span class="brand-text">SAMSUNG</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span class="brand-text">LG</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="whirlpool"><span class="brand-text" style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="ifb"><span class="brand-text" style="color:#d32f2f; font-weight:800;">IFB</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="bosch"><span class="brand-text" style="color:#e2001a; font-weight:800;">BOSCH</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="godrej"><span class="brand-text" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="haier"><span class="brand-text" style="color:#e2001a; font-weight:800;">Haier</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="panasonic"><span class="brand-text" style="color:#003ca5; font-weight:700;">Panasonic</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="voltas-beko"><span class="brand-text" style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
-                    <button class="filter-btn wm-brand-btn" data-brand="lloyd"><span class="brand-text" style="color:#0062a8; font-weight:800;">LLOYD</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="samsung"><span
+                            class="brand-text">SAMSUNG</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="lg"><i class="fab fa-lg"></i> <span
+                            class="brand-text">LG</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="whirlpool"><span class="brand-text"
+                            style="color:#fdba31; font-weight:700;">Whirlpool</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="ifb"><span class="brand-text"
+                            style="color:#d32f2f; font-weight:800;">IFB</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="bosch"><span class="brand-text"
+                            style="color:#e2001a; font-weight:800;">BOSCH</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="godrej"><span class="brand-text"
+                            style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700;">Godrej</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="haier"><span class="brand-text"
+                            style="color:#e2001a; font-weight:800;">Haier</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="panasonic"><span class="brand-text"
+                            style="color:#003ca5; font-weight:700;">Panasonic</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="voltas-beko"><span class="brand-text"
+                            style="color:#0088cc; font-weight:700;">Voltas Beko</span></button>
+                    <button class="filter-btn wm-brand-btn" data-brand="lloyd"><span class="brand-text"
+                            style="color:#0062a8; font-weight:800;">LLOYD</span></button>
                 </div>
             </div>
 
@@ -1310,11 +1483,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmSamsung.webp" alt="Samsung Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+WM'">
+                        <img src="WmSamsung.webp" alt="Samsung Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Samsung+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">SAMSUNG</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WW80T504DAN/TL</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#1428a0; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            SAMSUNG</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WW80T504DAN/TL
+                        </h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter | AI Wash</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-brain"></i> AI Wash</span>
@@ -1327,7 +1504,8 @@
                             <div class="dpc-discount">40% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1340,10 +1518,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmLG.webp" alt="LG Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=LG+WM'">
+                        <img src="WmLG.webp" alt="LG Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=LG+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;"><i class="fab fa-lg"></i> LG</div>
+                        <div class="dpc-brand-header"
+                            style="color:#a50034; font-weight:900; font-size:1.1rem; letter-spacing:1px; margin-bottom:2px;">
+                            <i class="fab fa-lg"></i> LG
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">FHB1208Z5M</h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter | Steam</div>
                         <div class="dpc-specs">
@@ -1357,7 +1539,8 @@
                             <div class="dpc-discount">40% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1370,11 +1553,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmWhirlpool.webp" alt="Whirlpool Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+WM'">
+                        <img src="WmWhirlpool.webp" alt="Whirlpool Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Whirlpool+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WHITEMAGIC 7.5 GENX</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#fdba31; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Whirlpool</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WHITEMAGIC 7.5
+                            GENX</h3>
                         <div class="dpc-specs-string">7.5 kg | Top Load | ZPF Technology</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-tachometer-alt"></i> ZPF Tech</span>
@@ -1387,7 +1573,8 @@
                             <div class="dpc-discount">33% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1400,11 +1587,14 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmIFB.webp" alt="IFB Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=IFB+WM'">
+                        <img src="WmIFB.webp" alt="IFB Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=IFB+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">EXECUTIVE ZXS 8.0</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#d32f2f; font-weight:900; font-size:1.1rem; margin-bottom:2px;">IFB</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">EXECUTIVE ZXS 8.0
+                        </h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-tint"></i> Aqua Energie</span>
@@ -1417,7 +1607,8 @@
                             <div class="dpc-discount">38% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1430,10 +1621,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmBosch.webp" alt="Bosch Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+WM'">
+                        <img src="WmBosch.webp" alt="Bosch Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Bosch+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
+                        <div class="dpc-brand-header"
+                            style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">BOSCH</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WGA244X0IN</h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter | i-DOS</div>
                         <div class="dpc-specs">
@@ -1447,7 +1640,8 @@
                             <div class="dpc-discount">30% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1460,11 +1654,15 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmGodrej.webp" alt="Godrej Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+WM'">
+                        <img src="WmGodrej.webp" alt="Godrej Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Godrej+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">Godrej</div>
-                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WSEDGE 7.5 KG</h3>
+                        <div class="dpc-brand-header"
+                            style="color:#e60000; font-family:'Brush Script MT', cursive, sans-serif; font-weight:700; font-size:1.3rem; margin-bottom:2px;">
+                            Godrej</div>
+                        <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WSEDGE 7.5 KG
+                        </h3>
                         <div class="dpc-specs-string">7.5 kg | Top Load | Inverter</div>
                         <div class="dpc-specs">
                             <span><i class="fas fa-sync"></i> TurboDrum</span>
@@ -1477,7 +1675,8 @@
                             <div class="dpc-discount">34% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1490,10 +1689,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmHaier.webp" alt="Haier Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Haier+WM'">
+                        <img src="WmHaier.webp" alt="Haier Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Haier+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
+                        <div class="dpc-brand-header"
+                            style="color:#e2001a; font-weight:900; font-size:1.1rem; margin-bottom:2px;">Haier</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">HWM80-1469S6</h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
                         <div class="dpc-specs">
@@ -1507,7 +1708,8 @@
                             <div class="dpc-discount">38% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1520,10 +1722,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmPanasonic.webp" alt="Panasonic Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+WM'">
+                        <img src="WmPanasonic.webp" alt="Panasonic Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Panasonic+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
+                        <div class="dpc-brand-header"
+                            style="color:#003ca5; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Panasonic</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">NA-F80A7HRB</h3>
                         <div class="dpc-specs-string">8 kg | Top Load | ActiveFoam</div>
                         <div class="dpc-specs">
@@ -1537,7 +1741,8 @@
                             <div class="dpc-discount">36% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1550,10 +1755,13 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmVoltasBeko.webp" alt="Voltas Beko Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+WM'">
+                        <img src="WmVoltasBeko.webp" alt="Voltas Beko Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Voltas+Beko+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko</div>
+                        <div class="dpc-brand-header"
+                            style="color:#0088cc; font-weight:800; font-size:1.1rem; margin-bottom:2px;">Voltas Beko
+                        </div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">WTE80G3D0</h3>
                         <div class="dpc-specs-string">8 kg | Front Load | Inverter</div>
                         <div class="dpc-specs">
@@ -1567,7 +1775,8 @@
                             <div class="dpc-discount">35% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
@@ -1580,10 +1789,12 @@
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="dpc-image">
-                        <img src="WmLloyd.webp" alt="Lloyd Washing Machine" onerror="this.src='https://via.placeholder.com/300x200?text=Lloyd+WM'">
+                        <img src="WmLloyd.webp" alt="Lloyd Washing Machine"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Lloyd+WM'">
                     </div>
                     <div class="dpc-info">
-                        <div class="dpc-brand-header" style="color:#0062a8; font-weight:800; font-size:1.1rem; margin-bottom:2px;">LLOYD</div>
+                        <div class="dpc-brand-header"
+                            style="color:#0062a8; font-weight:800; font-size:1.1rem; margin-bottom:2px;">LLOYD</div>
                         <h3 style="font-size:0.85rem; color:#666; font-weight:600; margin-bottom:4px;">LWMT70A</h3>
                         <div class="dpc-specs-string">7 kg | Top Load | Inverter</div>
                         <div class="dpc-specs">
@@ -1597,12 +1808,315 @@
                             <div class="dpc-discount">35% OFF</div>
                         </div>
                         <div class="dpc-footer">
-                            <a href="tel:+919894833958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                            <a href="tel:+916384103958" class="btn btn-brown"><i class="fas fa-shopping-cart"></i> Buy
+                                Now</a>
                             <a href="#contact" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Upgraded Premium SAMACOOL Footer Section -->
+    <footer class="site-footer" id="siteFooter" role="contentinfo">
+        <div class="footer-ambient-glow" aria-hidden="true"></div>
+        <div class="container footer-container">
+            <!-- Main Multi-Column Grid -->
+            <div class="footer-grid">
+                <!-- Column 1: About & Brand -->
+                <div class="footer-col footer-about-col">
+                    <div class="footer-brand-header">
+                        <a href="#home" class="footer-brand-link" aria-label="SAMACOOL Home">
+                            <img src="logo.png" alt="SAMACOOL Logo" class="footer-brand-logo" width="46" height="46" loading="lazy">
+                            <div class="footer-brand-name-wrap">
+                                <span class="footer-brand-title">SAMACOOL</span>
+                                <span class="footer-brand-subtitle">Appliances Service & Sales</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-est-badge">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                        <span>EST. 2008 • TRUSTED COMFORT</span>
+                    </div>
+                    <p class="footer-desc">
+                        Keeping your home comfortable since 2008. Certified, trusted sales, doorstep service & repair for all Air Conditioners, Refrigerators, and Washing Machines.
+                    </p>
+                    <div class="footer-trust-pills">
+                        <span class="footer-trust-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> 100% Genuine Parts</span>
+                        <span class="footer-trust-pill"><i class="fas fa-user-check" aria-hidden="true"></i> Certified Techs</span>
+                    </div>
+                    <!-- Social & WhatsApp Direct Links -->
+                    <div class="footer-social-wrap">
+                        <span class="footer-social-label">Connect With Us:</span>
+                        <div class="footer-socials">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon social-fb" aria-label="Follow SAMACOOL on Facebook" title="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon social-tw" aria-label="Follow SAMACOOL on Twitter" title="Twitter / X">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon social-ig" aria-label="Follow SAMACOOL on Instagram" title="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon social-yt" aria-label="Subscribe to SAMACOOL on YouTube" title="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://wa.me/916384103958?text=Hello%20SAMACOOL!%20I%20would%20like%20to%20inquire%20about%20your%20appliance%20services." target="_blank" rel="noopener noreferrer" class="social-icon social-wa" aria-label="Chat directly on WhatsApp" title="WhatsApp Chat">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Our Services -->
+                <div class="footer-col footer-nav-col">
+                    <h3 class="footer-title">
+                        <span>Our Services</span>
+                    </h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#services"><i class="fas fa-snowflake" aria-hidden="true"></i><span>AC Service & Repair</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-temperature-low" aria-hidden="true"></i><span>Fridge Service & Repair</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-soap" aria-hidden="true"></i><span>Washing Machine Service</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-calendar-check" aria-hidden="true"></i><span>Annual Maintenance (AMC)</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-tools" aria-hidden="true"></i><span>Expert Installation</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-gas-pump" aria-hidden="true"></i><span>Gas Refilling & Leak Fix</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div class="footer-col footer-nav-col">
+                    <h3 class="footer-title">
+                        <span>Quick Links</span>
+                    </h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#home"><i class="fas fa-angle-right" aria-hidden="true"></i><span>Home</span></a>
+                        </li>
+                        <li>
+                            <a href="#why-us"><i class="fas fa-angle-right" aria-hidden="true"></i><span>About SAMACOOL</span></a>
+                        </li>
+                        <li>
+                            <a href="#products"><i class="fas fa-angle-right" aria-hidden="true"></i><span>Appliances Catalog</span></a>
+                        </li>
+                        <li>
+                            <a href="#services"><i class="fas fa-angle-right" aria-hidden="true"></i><span>Services & Pricing</span></a>
+                        </li>
+                        <li>
+                            <a href="#contact"><i class="fas fa-angle-right" aria-hidden="true"></i><span>Book Service Online</span></a>
+                        </li>
+                        <li>
+                            <a href="tel:+916384103958"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>Emergency Helpline</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Direct Contact -->
+                <div class="footer-col footer-contact-col">
+                    <h3 class="footer-title">
+                        <span>Contact Info</span>
+                    </h3>
+                    <address class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Store & Workshop:</span>
+                                <span class="contact-item-value">CNA Road, Vaniyambadi, Tamil Nadu</span>
+                            </div>
+                        </div>
+
+                        <a href="tel:+916384103958" class="footer-contact-item footer-clickable-item" title="Click to call">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Direct Helpline:</span>
+                                <span class="contact-item-value font-bold">+91 6384103958</span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:shahidjamal13258@gmail.com" class="footer-contact-item footer-clickable-item" title="Click to send email">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Email Support:</span>
+                                <span class="contact-item-value email-val">shahidjamal13258@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/916384103958?text=Hello!%20I%20need%20information%20about%20your%20appliance%20services." target="_blank" rel="noopener noreferrer" class="footer-contact-item footer-clickable-item footer-wa-banner" title="Click to chat on WhatsApp">
+                            <div class="contact-item-icon wa-icon">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">WhatsApp Live:</span>
+                                <span class="contact-item-value">Instant Chat & Booking &rarr;</span>
+                            </div>
+                        </a>
+                    </address>
+                </div>
+
+                <!-- Column 5: Business Hours -->
+                <div class="footer-col footer-hours-col">
+                    <h3 class="footer-title">
+                        <span>Business Hours</span>
+                    </h3>
+                    <div class="business-hours-list">
+                        <div class="hours-item">
+                            <div class="hours-header">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hours-label">Monday - Saturday</span>
+                            </div>
+                            <span class="hours-val font-bold">8:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <div class="hours-header">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hours-label">Sunday</span>
+                            </div>
+                            <span class="hours-val font-bold">9:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-item hours-highlight-item">
+                            <div class="hours-header">
+                                <span class="pulsing-dot" aria-hidden="true"></span>
+                                <span class="hours-label">Emergency Service</span>
+                            </div>
+                            <span class="hours-val font-bold text-cyan">24/7 Available</span>
+                        </div>
+                        <div class="hours-item">
+                            <div class="hours-header">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                <span class="hours-label">Free Home Visit</span>
+                            </div>
+                            <span class="hours-val font-bold text-champagne">Within City Area</span>
+                        </div>
+                    </div>
+                    <div class="footer-promise-pill">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        <span>Doorstep visit within 30 minutes!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p class="copyright-text">
+                        &copy; 2026 <strong>SAMACOOL Appliances</strong>. All rights reserved. | AC, Refrigerator & Washing Machine Service & Sales.
+                    </p>
+                </div>
+                <div class="footer-bottom-right">
+                    <span class="designed-text">
+                        Designed with <i class="fas fa-heart text-red" aria-hidden="true"></i> for your cooling comfort
+                    </span>
+                    <a href="#home" class="footer-back-to-top" id="footerBackToTop" aria-label="Back to top of page" title="Back to top">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Featured Product Details Modal -->
+    <div id="featuredProductDetailsModal" class="featured-modal-overlay">
+        <div class="featured-modal-content">
+            <button id="closeFeaturedDetailsModal" class="featured-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="featured-modal-body" id="featuredDetailsBody">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Order & Enquiry Modal -->
+    <div id="productEnquiryModal" class="featured-modal-overlay">
+        <div class="featured-modal-content enquiry-modal-content">
+            <button id="closeProductEnquiryModal" class="featured-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="enquiry-modal-header">
+                <div class="enquiry-header-badge"><i class="fas fa-shopping-bag"></i> SAMACOOL Order & Enquiry</div>
+                <h2>Product Order & Enquiry</h2>
+                <p>Submit your details to request order placement, price quotation, or home delivery information.</p>
+            </div>
+
+            <div class="selected-product-box" id="enquiryProductBox">
+                <i class="fas fa-box-open"></i>
+                <div class="selected-product-text">
+                    <span class="label">SELECTED PRODUCT:</span>
+                    <strong id="enquiryProductName">Split AC 1.5 Ton 5 Star Inverter</strong>
+                </div>
+            </div>
+
+            <form id="productEnquiryForm" class="enquiry-form" action="https://formsubmit.co/shahidjamal13258@gmail.com" method="POST">
+                <input type="hidden" id="enquiryProductId" name="product_id" value="">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="enquiryCustomerName"><i class="fas fa-user"></i> Full Name <span
+                                class="required">*</span></label>
+                        <input type="text" id="enquiryCustomerName" name="customer_name" required
+                            placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryMobileNumber"><i class="fas fa-phone-alt"></i> Mobile Number (10 Digits)
+                            <span class="required">*</span></label>
+                        <input type="tel" id="enquiryMobileNumber" name="mobile_number" required pattern="[0-9]{10}"
+                            placeholder="e.g. 6384103958">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="enquiryEmailAddress"><i class="fas fa-envelope"></i> Email Address
+                            (Optional)</label>
+                        <input type="email" id="enquiryEmailAddress" name="email_address"
+                            placeholder="e.g. name@example.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="enquiryDeliveryAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address <span
+                            class="required">*</span></label>
+                    <textarea id="enquiryDeliveryAddress" name="delivery_address" rows="2" required
+                        placeholder="Enter your complete delivery address / city area"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="enquiryAdditionalMessage"><i class="fas fa-comment-alt"></i> Additional Message /
+                        Question</label>
+                    <textarea id="enquiryAdditionalMessage" name="additional_message" rows="2"
+                        placeholder="Any specific requirements, installation date, or question?"></textarea>
+                </div>
+
+                <div id="enquiryFormMessage" class="form-message" style="display: none;"></div>
+
+                <div class="enquiry-form-actions">
+                    <button type="submit" id="submitEnquiryBtn" class="btn btn-submit-enquiry">
+                        <i class="fas fa-paper-plane"></i> Submit Product Enquiry
+                    </button>
+                    <button type="button" id="whatsappEnquiryBtn" class="btn btn-whatsapp-enquiry">
+                        <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 

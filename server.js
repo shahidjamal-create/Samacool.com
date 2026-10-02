@@ -4,25 +4,13 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const path = require('path');
 
-const {
-    EMAIL_HOST,
-    EMAIL_PORT,
-    EMAIL_SECURE,
-    EMAIL_USER,
-    EMAIL_PASS,
-    EMAIL_FROM,
-    BOOKING_TO_EMAIL,
-    FRONTEND_ORIGIN,
-    PORT
-} = process.env;
-
-function requireEnv(key) {
-    const value = process.env[key];
-    if (!value) {
-        throw new Error(`Missing required environment variable: ${key}`);
-    }
-    return value;
-}
+const SMTP_HOST = process.env.SMTP_HOST || process.env.EMAIL_HOST || 'smtp.gmail.com';
+const SMTP_PORT = process.env.SMTP_PORT || process.env.EMAIL_PORT || 465;
+const SMTP_USER = process.env.SMTP_USER || process.env.EMAIL_USER || 'shahidjamal13258@gmail.com';
+const SMTP_PASS = process.env.SMTP_PASS || process.env.EMAIL_PASS || '';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || process.env.BOOKING_TO_EMAIL || 'shahidjamal13258@gmail.com';
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || '*';
+const PORT = process.env.PORT || 3000;
 
 function validateBookingPayload(payload) {
     const errors = [];
@@ -48,30 +36,19 @@ function validateBookingPayload(payload) {
 
 function createTransporter() {
     return nodemailer.createTransport({
-        host: requireEnv('EMAIL_HOST'),
-        port: Number(requireEnv('EMAIL_PORT')),
-        secure: EMAIL_SECURE === 'true',
+        host: SMTP_HOST,
+        port: Number(SMTP_PORT),
+        secure: Number(SMTP_PORT) === 465,
         auth: {
-            user: requireEnv('EMAIL_USER'),
-            pass: requireEnv('EMAIL_PASS')
+            user: SMTP_USER,
+            pass: SMTP_PASS
         }
     });
 }
 
 function validateEnvironment() {
-    const requiredVars = [
-        'EMAIL_HOST',
-        'EMAIL_PORT',
-        'EMAIL_USER',
-        'EMAIL_PASS',
-        'BOOKING_TO_EMAIL'
-    ];
-
-    const missing = requiredVars.filter(key => !process.env[key]);
-    if (missing.length > 0) {
-        console.error('The backend cannot start because these environment variables are missing:', missing.join(', '));
-        console.error('Copy .env.example to .env and fill in the missing values.');
-        process.exit(1);
+    if (!SMTP_PASS || SMTP_PASS === 'your-gmail-app-password') {
+        console.warn('NOTE: SMTP_PASS is not set in .env. Form submissions will also be handled directly via FormSubmit to ' + ADMIN_EMAIL);
     }
 }
 
@@ -108,8 +85,8 @@ app.post('/api/book-service', async (req, res) => {
 
         const transporter = createTransporter();
         const mailOptions = {
-            from: EMAIL_FROM || EMAIL_USER,
-            to: requireEnv('BOOKING_TO_EMAIL'),
+            from: SMTP_USER,
+            to: ADMIN_EMAIL,
             subject: `New Service Booking Request from ${payload.customer_name}`,
             text: `New service booking request received:\n\n` +
                 `Customer Name: ${payload.customer_name}\n` +
@@ -134,6 +111,80 @@ app.post('/api/book-service', async (req, res) => {
         return res.status(500).json({
             success: false,
             error: 'Unable to send your booking request at this time. Please try again later.'
+        });
+    }
+});
+
+app.post('/api/product-enquiry', async (req, res) => {
+    try {
+        console.log('Received product enquiry:', req.body);
+
+        const payload = {
+            product_name: (req.body.product_name || 'N/A').trim(),
+            product_brand: (req.body.product_brand || 'N/A').trim(),
+            product_category: (req.body.product_category || 'N/A').trim(),
+            product_price: (req.body.product_price || 'N/A').trim(),
+            customer_name: (req.body.customer_name || 'N/A').trim(),
+            phone_number: (req.body.phone_number || 'N/A').trim(),
+            email_address: (req.body.email_address || 'N/A').trim(),
+            delivery_address: (req.body.delivery_address || 'N/A').trim(),
+            message: (req.body.message || 'No additional message provided').trim(),
+            enquiry_date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+        };
+
+        const errors = [];
+        if (!payload.customer_name || payload.customer_name === 'N/A') errors.push('Customer name is required.');
+        if (!payload.phone_number || !/^([6-9]\d{9})$/.test(payload.phone_number)) errors.push('A valid 10-digit Indian mobile number is required.');
+        if (!payload.delivery_address || payload.delivery_address === 'N/A') errors.push('Delivery address is required.');
+
+        if (errors.length > 0) {
+            return res.status(400).json({ success: false, errors });
+        }
+
+        const transporter = createTransporter();
+        const mailOptions = {
+            from: SMTP_USER,
+            to: ADMIN_EMAIL,
+            subject: `New Product Enquiry - ${payload.product_name}`,
+            text: `SAMACOOL - New Product Order & Enquiry\n\n` +
+                `Selected Product:\n` +
+                `Product Name: ${payload.product_name}\n` +
+                `Brand: ${payload.product_brand}\n` +
+                `Category: ${payload.product_category}\n` +
+                `Price: ${payload.product_price}\n\n` +
+                `Customer Details:\n` +
+                `Full Name: ${payload.customer_name}\n` +
+                `Mobile Number: ${payload.phone_number}\n` +
+                `Email: ${payload.email_address}\n\n` +
+                `Delivery Address:\n` +
+                `${payload.delivery_address}\n\n` +
+                `Additional Message:\n` +
+                `${payload.message}\n`,
+            html: `<h2>SAMACOOL - New Product Order & Enquiry</h2>` +
+                `<h3>Selected Product:</h3>` +
+                `<p><strong>Product Name:</strong> ${payload.product_name}</p>` +
+                `<p><strong>Brand:</strong> ${payload.product_brand}</p>` +
+                `<p><strong>Category:</strong> ${payload.product_category}</p>` +
+                `<p><strong>Price:</strong> ${payload.product_price}</p>` +
+                `<h3>Customer Details:</h3>` +
+                `<p><strong>Full Name:</strong> ${payload.customer_name}</p>` +
+                `<p><strong>Mobile Number:</strong> ${payload.phone_number}</p>` +
+                `<p><strong>Email:</strong> ${payload.email_address}</p>` +
+                `<h3>Delivery Address:</h3>` +
+                `<p>${payload.delivery_address.replace(/\n/g, '<br>')}</p>` +
+                `<h3>Additional Message:</h3>` +
+                `<p>${payload.message.replace(/\n/g, '<br>')}</p>`
+        };
+
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Product enquiry email sent successfully:', info.messageId);
+
+        return res.status(200).json({ success: true, message: 'Enquiry submitted successfully. We will contact you soon.' });
+    } catch (error) {
+        console.error('Failed to send product enquiry:', error);
+        return res.status(500).json({
+            success: false,
+            error: 'Unable to send your enquiry at this time. Please try again later.'
         });
     }
 });
